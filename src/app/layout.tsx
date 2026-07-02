@@ -15,8 +15,8 @@ const shadowsIntoLight = Shadows_Into_Light({
 });
 
 export const metadata: Metadata = {
-  title: "Khenbridge | Leading Visa Consultants in Kerala | UK Immigration Experts in Kochi & Trivandrum",
-  description: "Khenbridge is Kerala's most trusted visa consultancy. Expert UK immigration legal support, visa refusal appeals, student visas, and work permits. Offices in Kochi and Trivandrum.",
+  title: "Khenbridge | Leading Visa Consultants in Kerala | Immigration Experts in Kochi",
+  description: "Khenbridge is Kerala's most trusted visa consultancy. Expert immigration guidance, visa refusal appeals, student visas, and work permits. Office in Kochi, serving clients across Kerala.",
   keywords: "visa consultants Kerala, UK immigration Kerala, visa consultants Kochi, visa consultants Trivandrum, UK visa refusal appeal, student visa Kerala, work permit visa India, best visa agency Kerala, Khenbridge",
 };
 

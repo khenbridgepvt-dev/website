@@ -5,21 +5,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
+const processSteps = [
+  { num: "01", title: "Free Consultation", desc: "We assess your case, understand your goals, and outline a clear path forward." },
+  { num: "02", title: "Document Collection", desc: "We guide you through every document needed and build a solid case strategy." },
+  { num: "03", title: "Application Preparation", desc: "Your application is meticulously prepared with thorough legal review." },
+  { num: "04", title: "Submission & Coaching", desc: "We submit your application, track its progress, and prepare you for interviews." },
+  { num: "05", title: "Post-Decision Support", desc: "Ongoing assistance including appeals and next steps if needed." },
+];
+
 const accordionData = [
   {
     title: "Why Khenbridge?",
     content:
-      "We combine local expertise in Kerala with international legal partnerships. Our UK based immigration solicitors work alongside our Kochi and Trivandrum teams to give you the strongest possible application. Whether it is your first visa or a refusal appeal, we treat every case with the same dedication and thoroughness.",
+      "Based in Kochi, we bring deep expertise in international immigration to clients across all of Kerala — from Thiruvananthapuram to Kannur. Whether it is your first visa or a complex refusal appeal, we treat every case with the same dedication, thoroughness, and commitment to getting it right.",
   },
   {
     title: "Our Process",
-    content:
-      "Step 1: Free initial consultation to assess your case. Step 2: Document collection and case strategy. Step 3: Application preparation with legal review. Step 4: Submission, tracking, and interview coaching. Step 5: Post decision support, including appeal if needed.",
+    content: "__PROCESS_STEPS__",
   },
   {
-    title: "UK Legal Partnership",
+    title: "Specialized Legal Expertise",
     content:
-      "Unlike typical visa agents, Khenbridge has a formal partnership with a UK based immigration legal team. This means complex cases, refusals, administrative reviews, appeals, and judicial reviews are handled by qualified immigration solicitors who understand UK immigration law inside and out.",
+      "What sets Khenbridge apart is our access to specialized immigration knowledge and experienced professionals who understand the nuances of international immigration law. Complex cases — refusals, administrative reviews, appeals, and judicial reviews — are handled with the expertise and precision they demand.",
   },
 ];
 
@@ -128,9 +135,9 @@ export default function ConceptSection() {
               className="text-base sm:text-lg text-indigo/60 mb-6 sm:mb-8 leading-relaxed"
             >
               At Khenbridge, we do not just file applications. We build
-              airtight cases. With deep expertise in immigration law and a
-              dedicated UK legal team, we handle everything from
-              straightforward tourist visas to the most complex refusal
+              airtight cases. With deep expertise in immigration law and
+              access to specialized legal knowledge, we handle everything
+              from straightforward tourist visas to the most complex refusal
               appeals.
             </motion.p>
 
@@ -171,9 +178,29 @@ export default function ConceptSection() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <p className="text-indigo/60 pb-4 sm:pb-5 leading-relaxed text-sm sm:text-base">
-                          {item.content}
-                        </p>
+                        {item.content === "__PROCESS_STEPS__" ? (
+                          <div className="pb-4 sm:pb-5 grid gap-3 sm:gap-4">
+                            {processSteps.map((step) => (
+                              <div key={step.num} className="flex items-start gap-3 sm:gap-4">
+                                <span className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/10 text-primary font-bold text-xs sm:text-sm flex items-center justify-center">
+                                  {step.num}
+                                </span>
+                                <div className="pt-0.5 sm:pt-1">
+                                  <h5 className="text-indigo font-semibold text-sm sm:text-base leading-tight">
+                                    {step.title}
+                                  </h5>
+                                  <p className="text-indigo/50 text-xs sm:text-sm leading-relaxed mt-0.5">
+                                    {step.desc}
+                                  </p>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-indigo/60 pb-4 sm:pb-5 leading-relaxed text-sm sm:text-base">
+                            {item.content}
+                          </p>
+                        )}
                       </motion.div>
                     )}
                   </AnimatePresence>

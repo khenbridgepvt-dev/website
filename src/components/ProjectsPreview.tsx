@@ -8,7 +8,7 @@ const highlights = [
   {
     title: "UK Spouse Visa Solutions",
     description:
-      "Reuniting families across borders. Our UK legal team specialises in spouse and partner visa applications, including complex refusal cases where previous applications were unsuccessful.",
+      "Reuniting families across borders. Our experienced team specialises in spouse and partner visa applications, including complex refusal cases where previous applications were unsuccessful.",
     img: "/images/london.png",
   },
   {
@@ -31,7 +31,9 @@ export default function ServiceHighlights() {
             {/* CTA Button */}
             <div className="w-full lg:w-2/12 order-3 lg:order-1 py-4 sm:py-6 lg:py-12 lg:pr-8 lg:border-r border-lavender/20 flex items-start">
               <a
-                href="#contact"
+                href="https://wa.me/918848100293?text=Hi%2C%20I%27m%20reaching%20out%20from%20the%20Khenbridge%20website.%20Can%20you%20help%20me%20with%20my%20visa%20enquiry%3F"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full bg-indigo hover:bg-primary text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 flex justify-between items-center transition-all duration-300 transform hover:-translate-y-1 rounded-sm text-sm sm:text-base"
               >
                 Learn More

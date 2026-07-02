@@ -6,9 +6,9 @@ import { Shield, Clock, Plane, HeartHandshake } from "lucide-react";
 const features = [
   {
     icon: Shield,
-    title: "UK Legal Team",
+    title: "Expert Legal Support",
     description:
-      "Our dedicated UK immigration solicitors handle complex refusal and appeal cases with precision.",
+      "Our experienced immigration specialists handle complex refusal and appeal cases with precision.",
   },
   {
     icon: Clock,

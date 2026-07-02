@@ -19,7 +19,7 @@ export default function Footer() {
             </Link>
             <p className="text-white/40 text-sm sm:text-base mb-6 leading-relaxed max-w-xs">
               Your bridge to your dreams. Kerala&apos;s most trusted visa consultancy
-              with expert UK immigration legal support.
+              with expert immigration guidance across Kerala.
             </p>
             <div className="flex flex-col gap-3 mb-6">
               <a
@@ -38,7 +38,7 @@ export default function Footer() {
               </a>
               <div className="flex items-start gap-3 text-white/70 text-sm sm:text-base">
                 <MapPin className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                <span>Kochi & Trivandrum, Kerala</span>
+                <span>Kochi, Kerala · Serving clients across Kerala</span>
               </div>
             </div>
             <div className="flex gap-3 sm:gap-4">

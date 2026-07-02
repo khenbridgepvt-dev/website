@@ -65,12 +65,14 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-            <Link
-              href="#contact"
+            <a
+              href="https://wa.me/918848100293?text=Hi%2C%20I%27m%20reaching%20out%20from%20the%20Khenbridge%20website.%20Can%20you%20help%20me%20with%20my%20visa%20enquiry%3F"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-accent text-indigo font-bold text-sm px-5 xl:px-6 py-2.5 rounded-sm hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 whitespace-nowrap"
             >
               Book Free Consultation
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -96,13 +98,15 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <Link
-              href="#contact"
+            <a
+              href="https://wa.me/918848100293?text=Hi%2C%20I%27m%20reaching%20out%20from%20the%20Khenbridge%20website.%20Can%20you%20help%20me%20with%20my%20visa%20enquiry%3F"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-accent text-indigo font-bold px-6 py-3 rounded-sm text-center w-full mt-4"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Book Free Consultation
-            </Link>
+            </a>
           </div>
         )}
       </div>
