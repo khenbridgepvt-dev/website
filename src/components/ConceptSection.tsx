@@ -17,7 +17,7 @@ const accordionData = [
   {
     title: "Why Khenbridge?",
     content:
-      "Based in Kochi, we bring deep expertise in international immigration to clients across all of Kerala — from Thiruvananthapuram to Kannur. Whether it is your first visa or a complex refusal appeal, we treat every case with the same dedication, thoroughness, and commitment to getting it right.",
+      "Based in Kochi, we bring deep expertise in international immigration to clients across all of Kerala — from Thiruvananthapuram to Kannur. As UK Visa Specialists, whether it is your first visa or a complex refusal appeal, we treat every case with the same dedication, thoroughness, and commitment to getting it right.",
   },
   {
     title: "Our Process",
@@ -40,23 +40,6 @@ export default function ConceptSection() {
           {/* Left Side: Staggered Images */}
           <div className="w-full lg:w-1/2">
             <div className="flex mb-3 sm:mb-4 gap-2 sm:gap-4">
-              <div className="flex-1">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="bg-lavender/10 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg p-1 sm:p-2 aspect-[4/5] relative"
-                >
-                  <Image
-                    src="/images/london.png"
-                    alt="London skyline"
-                    fill
-                    sizes="(max-width: 768px) 33vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover rounded-xl sm:rounded-2xl"
-                  />
-                </motion.div>
-              </div>
               <div className="flex-1 mt-6 sm:mt-12">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -135,10 +118,11 @@ export default function ConceptSection() {
               className="text-base sm:text-lg text-indigo/60 mb-6 sm:mb-8 leading-relaxed"
             >
               At Khenbridge, we do not just file applications. We build
-              airtight cases. With deep expertise in immigration law and
-              access to specialized legal knowledge, we handle everything
-              from straightforward tourist visas to the most complex refusal
-              appeals.
+              airtight cases. As UK Visa Specialists, with deep expertise in
+              immigration law and access to specialized legal knowledge, we
+              handle everything from straightforward tourist visas to the most
+              complex refusal appeals. Our legal team is available to help at
+              every stage.
             </motion.p>
 
             <motion.div

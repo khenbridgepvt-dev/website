@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Plane } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -45,11 +46,29 @@ export default function Header() {
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="#home" className="flex items-center gap-2 group flex-shrink-0">
-            <Plane className="w-5 h-5 sm:w-7 sm:h-7 text-accent group-hover:rotate-[-15deg] transition-transform duration-300" />
-            <span className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
-              KHENBRIDGE
-            </span>
+          <Link
+            href="#home"
+            aria-label="Khenbridge home"
+            className="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 min-h-[44px] rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+          >
+            <Image
+              src="/logo/Logo.png"
+              alt=""
+              aria-hidden
+              width={36}
+              height={36}
+              className="h-8 w-8 sm:h-9 sm:w-9 object-contain"
+              priority
+            />
+            <Image
+              src="/logo/Title.png"
+              alt=""
+              aria-hidden
+              width={162}
+              height={36}
+              className="h-8 sm:h-9 w-auto object-contain translate-y-px"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

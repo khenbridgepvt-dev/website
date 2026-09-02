@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Plane, Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
@@ -11,11 +12,27 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-8 xl:gap-12 mb-12 sm:mb-16">
           {/* Logo and Contact */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-2 mb-4 sm:mb-6 group">
-              <Plane className="w-5 h-5 sm:w-6 sm:h-6 text-accent group-hover:rotate-[-15deg] transition-transform duration-300" />
-              <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                KHENBRIDGE
-              </span>
+            <Link
+              href="#home"
+              aria-label="Khenbridge home"
+              className="inline-flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6 group min-h-[44px] rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-indigo"
+            >
+              <Image
+                src="/logo/Logo.png"
+                alt=""
+                aria-hidden
+                width={40}
+                height={40}
+                className="h-9 w-9 sm:h-10 sm:w-10 object-contain"
+              />
+              <Image
+                src="/logo/Title.png"
+                alt=""
+                aria-hidden
+                width={180}
+                height={40}
+                className="h-9 sm:h-10 w-auto object-contain translate-y-px"
+              />
             </Link>
             <p className="text-white/40 text-sm sm:text-base mb-6 leading-relaxed max-w-xs">
               Your bridge to your dreams. Kerala&apos;s most trusted visa consultancy
