@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins, Shadows_Into_Light } from "next/font/google";
 import "./globals.css";
 
@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: "Khenbridge | Leading Visa Consultants in Kerala | Immigration Experts in Kochi",
   description: "Khenbridge is Kerala's most trusted visa consultancy. Expert immigration guidance, visa refusal appeals, student visas, and work permits. Office in Kochi, serving clients across Kerala.",
   keywords: "visa consultants Kerala, UK immigration Kerala, visa consultants Kochi, visa consultants Trivandrum, UK visa refusal appeal, student visa Kerala, work permit visa India, best visa agency Kerala, Khenbridge",
+  manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#21173F",
 };
 
 export default function RootLayout({
