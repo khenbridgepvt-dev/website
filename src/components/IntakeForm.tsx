@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { Loader2 } from "lucide-react";
+import { PRIMARY_CTA_BUTTON_CLASS } from "@/lib/contact";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -152,7 +153,7 @@ export default function IntakeForm({ source = "queries-intake" }: IntakeFormProp
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full flex items-center justify-center gap-2 bg-accent text-indigo font-bold text-sm sm:text-base px-6 py-3 rounded-sm hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 disabled:opacity-60 disabled:pointer-events-none"
+        className={`w-full flex items-center justify-center gap-2 border-0 cursor-pointer appearance-none text-sm sm:text-base px-6 py-3 disabled:opacity-60 disabled:pointer-events-none disabled:hover:translate-y-0 disabled:hover:shadow-none ${PRIMARY_CTA_BUTTON_CLASS}`}
       >
         {status === "submitting" ? (
           <>

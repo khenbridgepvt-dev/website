@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { OFFICE_EMAIL, OFFICE_PHONE, OFFICE_PHONE_DISPLAY } from "@/lib/contact";
 
 export default function Footer() {
   return (
@@ -45,18 +46,18 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-3 mb-6">
               <a
-                href="mailto:info@khenbridge.com"
+                href={`mailto:${OFFICE_EMAIL}`}
                 className="flex items-center gap-3 text-white/70 hover:text-accent transition-colors duration-300 text-sm sm:text-base"
               >
                 <Mail className="w-4 h-4 text-accent flex-shrink-0" />
-                info@khenbridge.com
+                {OFFICE_EMAIL}
               </a>
               <a
-                href="tel:+918848100293"
+                href={`tel:${OFFICE_PHONE}`}
                 className="flex items-center gap-3 text-white/70 hover:text-accent transition-colors duration-300 text-sm sm:text-base"
               >
                 <Phone className="w-4 h-4 text-accent flex-shrink-0" />
-                +91 8848100293
+                {OFFICE_PHONE_DISPLAY}
               </a>
               <div className="flex items-start gap-3 text-white/70 text-sm sm:text-base">
                 <MapPin className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
@@ -84,15 +85,6 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={16} />
-              </a>
-              <a
-                href="https://wa.me/918848100293"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-sm bg-white/10 flex items-center justify-center text-white/60 hover:bg-accent hover:text-indigo transition-all duration-300"
-                aria-label="WhatsApp"
-              >
-                <FaWhatsapp size={16} />
               </a>
             </div>
           </div>

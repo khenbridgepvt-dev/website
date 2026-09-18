@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/contact";
+import { MAILTO_URL, PRIMARY_CTA_BUTTON_CLASS } from "@/lib/contact";
 
 const navLinks = [
   { name: "Home", href: "/#home" },
@@ -139,10 +139,8 @@ export default function Header() {
               ))}
             </nav>
             <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-accent text-indigo font-bold text-sm px-5 xl:px-6 py-2.5 rounded-sm hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 whitespace-nowrap"
+              href={MAILTO_URL}
+              className={`${PRIMARY_CTA_BUTTON_CLASS} text-sm px-5 xl:px-6 py-2.5 whitespace-nowrap`}
             >
               Book Free Consultation
             </a>
@@ -172,10 +170,8 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-accent text-indigo font-bold px-6 py-3 rounded-sm text-center w-full mt-4"
+              href={MAILTO_URL}
+              className={`${PRIMARY_CTA_BUTTON_CLASS} px-6 py-3 text-center w-full mt-4 block`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Book Free Consultation

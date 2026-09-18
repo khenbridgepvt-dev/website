@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { MAILTO_ENQUIRY_URL } from "@/lib/contact";
 
 export default function AboutSection() {
   return (
@@ -75,9 +76,7 @@ export default function AboutSection() {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
               <a
-                href="https://wa.me/918848100293?text=Hi%2C%20I%27m%20reaching%20out%20from%20the%20Khenbridge%20website.%20Can%20you%20help%20me%20with%20my%20visa%20enquiry%3F"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={MAILTO_ENQUIRY_URL}
                 className="group relative flex items-center justify-center w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full bg-accent text-indigo font-bold text-lg sm:text-xl lg:text-2xl transition-all duration-300 shadow-xl hover:shadow-accent/40 hover:scale-105"
               >
                 Let&apos;s Talk

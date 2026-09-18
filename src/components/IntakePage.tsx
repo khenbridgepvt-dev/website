@@ -1,18 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Phone } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { Mail } from "lucide-react";
 import IntakeForm from "@/components/IntakeForm";
-import {
-  OFFICE_PHONE,
-  OFFICE_PHONE_DISPLAY,
-  WHATSAPP_URL,
-} from "@/lib/contact";
+import { MAILTO_URL, OFFICE_EMAIL, PRIMARY_CTA_BUTTON_CLASS } from "@/lib/contact";
 
 const nextSteps = [
   "We review your enquiry",
-  "A visa specialist calls you back",
+  "Our team replies by email",
   "You get a free initial consultation",
 ];
 
@@ -29,8 +24,8 @@ export default function IntakePage() {
               Book your free consultation
             </h1>
             <p className="text-indigo/70 text-base sm:text-lg leading-relaxed mb-6">
-              All our initial consultations are free. Fill in the form and we&apos;ll arrange a
-              call back at a time that suits you.
+              All our initial consultations are free. Fill in the form and we&apos;ll get back to
+              you by email.
             </p>
 
             <p className="text-sm sm:text-base text-indigo/80 mb-6">
@@ -38,22 +33,13 @@ export default function IntakePage() {
               Hindi, English.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
+            <div className="flex justify-center lg:justify-start mb-8">
               <a
-                href={`tel:${OFFICE_PHONE}`}
-                className="inline-flex items-center justify-center gap-2 border border-indigo/20 bg-white text-indigo font-medium text-sm px-5 py-2.5 rounded-sm hover:border-primary hover:text-primary transition-colors"
+                href={MAILTO_URL}
+                className={`${PRIMARY_CTA_BUTTON_CLASS} inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5`}
               >
-                <Phone className="w-4 h-4 text-accent" aria-hidden />
-                Call {OFFICE_PHONE_DISPLAY}
-              </a>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-indigo text-white font-medium text-sm px-5 py-2.5 rounded-sm hover:bg-primary transition-colors"
-              >
-                <FaWhatsapp className="w-4 h-4" aria-hidden />
-                WhatsApp us
+                <Mail className="w-4 h-4" aria-hidden />
+                Email {OFFICE_EMAIL}
               </a>
             </div>
 

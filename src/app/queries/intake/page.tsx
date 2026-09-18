@@ -6,7 +6,7 @@ import IntakePage from "@/components/IntakePage";
 export const metadata: Metadata = {
   title: "Free visa consultation | Khenbridge",
   description:
-    "Book a free initial consultation with Khenbridge. Share your details and our team will call you back. Malayalam, Hindi, and English.",
+    "Book a free initial consultation with Khenbridge. Share your details or email us — we will get back to you. Malayalam, Hindi, and English.",
 };
 
 export default function IntakeRoutePage() {
