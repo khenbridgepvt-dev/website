@@ -1,29 +1,69 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About Us", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "UK Immigration", href: "#uk-immigration" },
-  { name: "Destinations", href: "#destinations" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/#home" },
+  { name: "About Us", href: "/#about" },
+  { name: "Services", href: "/#services" },
+  { name: "UK Immigration", href: "/#uk-immigration" },
+  { name: "Destinations", href: "/#destinations" },
+  { name: "Contact", href: "/queries/intake" },
 ];
 
 export default function Header() {
+  const pathname = usePathname();
+  const isIntakePage = pathname?.startsWith("/queries/intake");
+  const headerRef = useRef<HTMLElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [navOpacity, setNavOpacity] = useState(1);
+  const [headerHeight, setHeaderHeight] = useState(72);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const updateHeader = () => {
       setIsScrolled(window.scrollY > 50);
+
+      if (headerRef.current) {
+        setHeaderHeight(headerRef.current.offsetHeight);
+      }
+
+      const footer = document.getElementById("site-footer");
+      const currentHeaderHeight = headerRef.current?.offsetHeight ?? 72;
+
+      if (!footer) {
+        setNavOpacity(1);
+        return;
+      }
+
+      const footerTop = footer.getBoundingClientRect().top;
+      const fadeStart = currentHeaderHeight + 120;
+      const fadeEnd = currentHeaderHeight * 0.4;
+      const opacity = Math.max(
+        0,
+        Math.min(1, (footerTop - fadeEnd) / (fadeStart - fadeEnd)),
+      );
+
+      setNavOpacity(opacity);
+
+      if (opacity < 0.15) {
+        setIsMobileMenuOpen(false);
+      }
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    window.addEventListener("resize", updateHeader);
+
+    return () => {
+      window.removeEventListener("scroll", updateHeader);
+      window.removeEventListener("resize", updateHeader);
+    };
   }, []);
 
   // Close mobile menu on resize
@@ -36,18 +76,31 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-indigo/95 backdrop-blur-md shadow-lg shadow-indigo/20 py-2 sm:py-3"
-          : "bg-transparent py-3 sm:py-5"
-      }`}
-    >
+    <>
+      <div
+        aria-hidden
+        className="fixed inset-x-0 top-0 z-40 bg-indigo pointer-events-none transition-opacity duration-500"
+        style={{
+          height: headerHeight,
+          opacity: 1 - navOpacity,
+        }}
+      />
+      <header
+        ref={headerRef}
+        style={{ opacity: navOpacity }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          navOpacity < 0.1 ? "pointer-events-none" : ""
+        } ${
+          isScrolled || isIntakePage
+            ? "bg-indigo/95 backdrop-blur-md shadow-lg shadow-indigo/20 py-2 sm:py-3"
+            : "bg-transparent py-3 sm:py-5"
+        }`}
+      >
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
-            href="#home"
+            href="/#home"
             aria-label="Khenbridge home"
             className="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 min-h-[44px] rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
           >
@@ -67,6 +120,7 @@ export default function Header() {
               width={162}
               height={36}
               className="h-8 sm:h-9 w-auto object-contain translate-y-px"
+              style={{ width: "auto" }}
               priority
             />
           </Link>
@@ -85,7 +139,7 @@ export default function Header() {
               ))}
             </nav>
             <a
-              href="https://wa.me/918848100293?text=Hi%2C%20I%27m%20reaching%20out%20from%20the%20Khenbridge%20website.%20Can%20you%20help%20me%20with%20my%20visa%20enquiry%3F"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-accent text-indigo font-bold text-sm px-5 xl:px-6 py-2.5 rounded-sm hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 whitespace-nowrap"
@@ -118,7 +172,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="https://wa.me/918848100293?text=Hi%2C%20I%27m%20reaching%20out%20from%20the%20Khenbridge%20website.%20Can%20you%20help%20me%20with%20my%20visa%20enquiry%3F"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-accent text-indigo font-bold px-6 py-3 rounded-sm text-center w-full mt-4"
@@ -130,5 +184,6 @@ export default function Header() {
         )}
       </div>
     </header>
+    </>
   );
 }
