@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { MAILTO_URL, PRIMARY_CTA_BUTTON_CLASS } from "@/lib/contact";
+import { PRIMARY_CTA_BUTTON_CLASS } from "@/lib/contact";
 
 const navLinks = [
   { name: "Home", href: "/#home" },
@@ -13,8 +13,9 @@ const navLinks = [
   { name: "Services", href: "/#services" },
   { name: "UK Immigration", href: "/#uk-immigration" },
   { name: "Destinations", href: "/#destinations" },
-  { name: "Contact", href: "/queries/intake" },
 ];
+
+const INTAKE_PATH = "/queries/intake";
 
 export default function Header() {
   const pathname = usePathname();
@@ -138,12 +139,12 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-            <a
-              href={MAILTO_URL}
+            <Link
+              href={INTAKE_PATH}
               className={`${PRIMARY_CTA_BUTTON_CLASS} text-sm px-5 xl:px-6 py-2.5 whitespace-nowrap`}
             >
               Book Free Consultation
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -169,13 +170,13 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <a
-              href={MAILTO_URL}
+            <Link
+              href={INTAKE_PATH}
               className={`${PRIMARY_CTA_BUTTON_CLASS} px-6 py-3 text-center w-full mt-4 block`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Book Free Consultation
-            </a>
+            </Link>
           </div>
         )}
       </div>

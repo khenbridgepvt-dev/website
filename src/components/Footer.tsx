@@ -117,14 +117,6 @@ export default function Footer() {
                   Services
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/queries/intake"
-                  className="text-white/50 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
-                >
-                  Contact
-                </Link>
-              </li>
             </ul>
           </div>
 
