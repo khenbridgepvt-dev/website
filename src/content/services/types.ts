@@ -24,9 +24,9 @@ export type ServiceSection = {
   linkedParagraphs?: ServiceTextSegment[][];
   paragraphsAfter?: string[];
   bullets?: string[];
+  subsections?: ServiceSubsection[];
   steps?: ServiceSectionStep[];
   highlights?: ServiceSectionHighlight[];
-  subsections?: ServiceSubsection[];
 };
 
 export type ServiceFaq = {

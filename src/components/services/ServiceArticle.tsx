@@ -1,7 +1,36 @@
 import Link from "next/link";
-import type { ServiceArticleContent } from "@/content/services/types";
-import { ServiceRichText } from "@/components/services/ServiceRichText";
+import type { ServiceArticleContent, ServiceTextSegment } from "@/content/services/types";
 import { PRIMARY_CTA_BUTTON_CLASS } from "@/lib/contact";
+
+function renderSegments(segments: ServiceTextSegment[]) {
+  return segments.map((segment, index) => {
+    if (segment.type === "link") {
+      if (segment.external) {
+        return (
+          <a
+            key={`${segment.href}-${index}`}
+            href={segment.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-primary hover:text-accent transition-colors duration-300"
+          >
+            {segment.value}
+          </a>
+        );
+      }
+      return (
+        <Link
+          key={`${segment.href}-${index}`}
+          href={segment.href}
+          className="font-medium text-primary hover:text-accent transition-colors duration-300"
+        >
+          {segment.value}
+        </Link>
+      );
+    }
+    return <span key={`${index}-${segment.value.slice(0, 24)}`}>{segment.value}</span>;
+  });
+}
 
 export default function ServiceArticle({ content }: { content: ServiceArticleContent }) {
   const { eyebrow, h1, intro, sections, faqs, cta, contactLine, lastUpdated, disclaimer } =
@@ -16,7 +45,10 @@ export default function ServiceArticle({ content }: { content: ServiceArticleCon
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-indigo leading-tight mb-6">{h1}</h1>
           {intro.map((paragraph) => (
-            <p key={paragraph.slice(0, 48)} className="text-indigo/70 text-base sm:text-lg leading-relaxed mb-4">
+            <p
+              key={paragraph.slice(0, 48)}
+              className="text-indigo/70 text-base sm:text-lg leading-relaxed mb-4"
+            >
               {paragraph}
             </p>
           ))}
@@ -34,19 +66,11 @@ export default function ServiceArticle({ content }: { content: ServiceArticleCon
               ))}
               {section.linkedParagraphs?.map((segments, index) => (
                 <p
-                  key={index}
+                  key={`linked-${section.id}-${index}`}
                   className="text-indigo/70 text-base leading-relaxed mb-4"
                 >
-                  <ServiceRichText segments={segments} />
+                  {renderSegments(segments)}
                 </p>
-              ))}
-              {section.subsections?.map((subsection) => (
-                <div key={subsection.title} className="mb-5">
-                  <h3 className="text-lg font-medium text-indigo mb-2">{subsection.title}</h3>
-                  <p className="text-indigo/70 text-base leading-relaxed">
-                    <ServiceRichText segments={subsection.segments} />
-                  </p>
-                </div>
               ))}
               {section.bullets && section.bullets.length > 0 && (
                 <ul className="list-disc pl-5 space-y-2 text-indigo/70 text-base leading-relaxed mb-4">
@@ -55,6 +79,14 @@ export default function ServiceArticle({ content }: { content: ServiceArticleCon
                   ))}
                 </ul>
               )}
+              {section.subsections?.map((subsection) => (
+                <div key={subsection.title} className="mb-4">
+                  <h3 className="text-lg font-medium text-indigo mb-2">{subsection.title}</h3>
+                  <p className="text-indigo/70 text-base leading-relaxed">
+                    {renderSegments(subsection.segments)}
+                  </p>
+                </div>
+              ))}
               {section.steps && (
                 <ol className="list-decimal pl-5 space-y-3 text-indigo/70 text-base leading-relaxed mb-4">
                   {section.steps.map((step) => (
@@ -106,9 +138,9 @@ export default function ServiceArticle({ content }: { content: ServiceArticleCon
             <p className="text-indigo/70 text-sm sm:text-base mt-6">{contactLine}</p>
           </section>
 
-          {lastUpdated && (
-            <p className="text-sm text-indigo/60 mt-10">{lastUpdated}</p>
-          )}
+          {lastUpdated ? (
+            <p className="text-sm text-indigo/60 mt-8">{lastUpdated}</p>
+          ) : null}
           <p className="text-sm text-indigo/60 border-t border-lavender/30 pt-6 mt-6">{disclaimer}</p>
         </div>
       </div>
