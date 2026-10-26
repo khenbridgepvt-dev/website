@@ -18,7 +18,7 @@ const accordionData = [
   {
     title: "Why Khenbridge?",
     content:
-      "Based in Kochi, we bring deep expertise in international immigration to clients across all of Kerala — from Thiruvananthapuram to Kannur. As UK Visa Specialists, whether it is your first visa or a complex refusal appeal, we treat every case with the same dedication, thoroughness, and commitment to getting it right.",
+      "Based in Kochi, we bring deep expertise in international immigration to clients across Kerala, from Thiruvananthapuram to Kannur. As UK Visa Specialists, whether it is your first visa or a complex refusal appeal, we treat every case with the same dedication, thoroughness, and commitment to getting it right.",
   },
   {
     title: "Our Process",
@@ -27,7 +27,7 @@ const accordionData = [
   {
     title: "Specialized Legal Expertise",
     content:
-      "What sets Khenbridge apart is our access to specialized immigration knowledge and experienced professionals who understand the nuances of international immigration law. Complex cases — refusals, administrative reviews, appeals, and judicial reviews — are handled with the expertise and precision they demand.",
+      "What sets Khenbridge apart is our access to specialized immigration knowledge and experienced professionals who understand the nuances of international immigration law. Complex cases (refusals, administrative reviews, appeals, and judicial reviews) are handled with the expertise and precision they demand.",
   },
 ];
 

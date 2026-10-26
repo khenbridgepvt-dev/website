@@ -3,6 +3,12 @@ import Image from "next/image";
 import SocialIconLinks from "@/components/SocialIconLinks";
 import { Mail, MapPin, Phone } from "lucide-react";
 import {
+  LOGO_ALT,
+  LOGO_INTRINSIC_HEIGHT,
+  LOGO_INTRINSIC_WIDTH,
+  LOGO_SRC,
+} from "@/lib/brand";
+import {
   OFFICE_ADDRESS_DISPLAY,
   OFFICE_EMAIL,
   OFFICE_PHONE,
@@ -25,21 +31,12 @@ export default function Footer() {
               className="flex items-center gap-2 sm:gap-2.5 mb-4 sm:mb-6 group min-h-[44px] max-w-full rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-indigo"
             >
               <Image
-                src="/logo/Logo.png"
-                alt="Khenbridge logo"
-                width={36}
-                height={36}
-                className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 flex-shrink-0 object-contain"
+                src={LOGO_SRC}
+                alt={LOGO_ALT}
+                width={LOGO_INTRINSIC_WIDTH}
+                height={LOGO_INTRINSIC_HEIGHT}
+                className="h-7 sm:h-8 md:h-9 w-auto max-w-[min(100%,10.5rem)] object-contain object-left"
               />
-              <span className="relative h-7 sm:h-8 md:h-9 flex-1 min-w-0 max-w-[10.125rem]">
-                <Image
-                  src="/logo/Title.png"
-                  alt="Khenbridge"
-                  fill
-                  sizes="(max-width: 640px) 120px, 162px"
-                  className="object-contain object-left translate-y-px"
-                />
-              </span>
             </Link>
             <p className="text-white/70 text-sm sm:text-base mb-6 leading-relaxed max-w-xs">
               Your bridge to your dreams. Kerala&apos;s most trusted visa consultancy

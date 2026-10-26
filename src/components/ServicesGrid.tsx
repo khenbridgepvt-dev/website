@@ -13,7 +13,6 @@ import {
   FileCheck,
   Scale,
 } from "lucide-react";
-import { GHOST_LINK_CLASS } from "@/lib/contact";
 
 type ServiceTile = {
   title: string;
@@ -50,16 +49,6 @@ export default function ServicesGrid() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo leading-tight max-w-3xl">
           Visa and immigration services
         </h2>
-        <p className="mt-3 text-base text-indigo/70 max-w-3xl leading-relaxed">
-          <Link
-            href="/services/visit-visas/"
-            className={GHOST_LINK_CLASS}
-          >
-            Visit and tourist visas
-          </Link>
-          {" "}
-          — assessment and document support for short-stay travel from Kerala.
-        </p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4">
         {services.map((service, index) => {

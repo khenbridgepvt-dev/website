@@ -6,7 +6,7 @@ import { INTAKE_KEYWORDS, buildOpenGraph, buildTwitter } from "@/lib/seo";
 
 const INTAKE_TITLE = "Free visa consultation | Khenbridge";
 const INTAKE_DESCRIPTION =
-  "Book a free initial consultation with Khenbridge. Share your details or email us — we will get back to you. Malayalam, Hindi, and English.";
+  "Book a free initial consultation with Khenbridge. Share your details or email us and we will get back to you. Malayalam, Hindi, and English.";
 
 export const metadata: Metadata = {
   title: INTAKE_TITLE,

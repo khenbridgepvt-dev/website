@@ -6,7 +6,7 @@ import toIco from "to-ico";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
-const sourcePath = path.join(rootDir, "assets", "logo", "Logo.png");
+const sourcePath = path.join(rootDir, "assets", "logo", "khenbridge-logo.png");
 const appDir = path.join(rootDir, "src", "app");
 
 const BLACK_THRESHOLD = 30;

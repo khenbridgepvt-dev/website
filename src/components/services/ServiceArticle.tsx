@@ -94,7 +94,7 @@ export default function ServiceArticle({ content }: { content: ServiceArticleCon
                   {section.steps.map((step) => (
                     <li key={step.title}>
                       <span className="font-bold text-indigo">{step.title}</span>
-                      {" — "}
+                      {": "}
                       {step.body}
                     </li>
                   ))}

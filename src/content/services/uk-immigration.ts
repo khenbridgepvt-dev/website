@@ -2,9 +2,9 @@ import type { ServiceArticleContent } from "@/content/services/types";
 
 export const ukImmigrationContent: ServiceArticleContent = {
   eyebrow: "Khenbridge",
-  h1: "UK visa and immigration support from Kerala — routes, rules, and clear guidance",
+  h1: "UK visa and immigration support from Kerala: routes, rules, and clear guidance",
   intro: [
-    "The United Kingdom remains one of the most common destinations for families, students, and professionals we speak with in Kerala. The routes are many, the rules shift when the Home Office updates guidance, and a small mistake on a form can cost months. Khenbridge focuses on UK immigration alongside other visa work. We help you understand which route fits your situation, what evidence you need, and how to present your case clearly—whether you are applying from India or already living in the UK.",
+    "The United Kingdom remains one of the most common destinations for families, students, and professionals we speak with in Kerala. The routes are many, the rules shift when the Home Office updates guidance, and a small mistake on a form can cost months. Khenbridge focuses on UK immigration alongside other visa work. We help you understand which route fits your situation, what evidence you need, and how to present your case clearly, whether you are applying from India or already living in the UK.",
     "We are immigration consultants, not solicitors. For complex legal representation we work with immigration lawyers when your case needs it. We do not promise visa outcomes; only UK authorities decide applications.",
   ],
   sections: [
@@ -45,7 +45,7 @@ export const ukImmigrationContent: ServiceArticleContent = {
             {
               type: "text",
               value:
-                "Family routes are emotionally important and technically demanding. Whether you are married, in a civil partnership, or in a durable relationship recognised by UK rules, you must prove the relationship is genuine and that financial and English requirements are met. We guide couples through evidence gathering—communication history, living arrangements, photos, statements—and help avoid gaps that cause delays or refusals.",
+                "Family routes are emotionally important and technically demanding. Whether you are married, in a civil partnership, or in a durable relationship recognised by UK rules, you must prove the relationship is genuine and that financial and English requirements are met. We guide couples through evidence gathering (communication history, living arrangements, photos, statements) and help avoid gaps that cause delays or refusals.",
             },
           ],
         },
@@ -80,7 +80,7 @@ export const ukImmigrationContent: ServiceArticleContent = {
       title: "Help if you are already in the UK or faced a refusal",
       paragraphs: [
         "Not every client applies from Kochi. You may already hold a UK visa and need an extension, a switch to another category, or advice after a change in your personal circumstances. Others receive a refusal and wonder whether to reapply, request an administrative review, or explore appeal options where they exist.",
-        "We start by reading the refusal letter or your current immigration status carefully. If the Home Office gave a clear reason—missing documents, financial thresholds not met, credibility concerns—we tell you whether reapplication with stronger evidence is realistic. If the issue is legal or procedural, we refer you to immigration lawyers rather than suggesting you try the same application again without change.",
+        "We start by reading the refusal letter or your current immigration status carefully. If the Home Office gave a clear reason (missing documents, financial thresholds not met, credibility concerns), we tell you whether reapplication with stronger evidence is realistic. If the issue is legal or procedural, we refer you to immigration lawyers rather than suggesting you try the same application again without change.",
         "We will not sell false hope. Sometimes the honest answer is to wait, gather more evidence, or take a different route. That conversation is still valuable.",
       ],
     },
@@ -89,7 +89,7 @@ export const ukImmigrationContent: ServiceArticleContent = {
       title: "Staying current with UK immigration law",
       paragraphs: [
         "UK immigration rules change. Salary lists, sponsor duties, maintenance funds, English language tests, and permitted activities on each visa type are updated on gov.uk and in policy guidance. What was true two years ago may not apply today.",
-        "Our team tracks these changes as part of daily casework. When you book an assessment, we verify the requirements that matter for your application date—not outdated blog posts or social media rumours. If a rule is in flux, we say so and plan accordingly.",
+        "Our team tracks these changes as part of daily casework. When you book an assessment, we verify the requirements that matter for your application date, not outdated blog posts or social media rumours. If a rule is in flux, we say so and plan accordingly.",
       ],
       linkedParagraphs: [
         [
@@ -126,7 +126,7 @@ export const ukImmigrationContent: ServiceArticleContent = {
         },
         {
           title: "After the decision",
-          body: "Next steps for entry, extensions, or—if needed—reviewing refusal options.",
+          body: "Next steps for entry, extensions, or, if needed, reviewing refusal options.",
         },
       ],
       highlights: [
@@ -160,7 +160,7 @@ export const ukImmigrationContent: ServiceArticleContent = {
       id: "serving-kerala",
       title: "Serving Kochi and all of Kerala",
       paragraphs: [
-        "Our consultancy is based in Kochi and we work with clients across Kerala—employed professionals, students, families split between countries, and parents supporting children abroad. Consultations can start by phone, email, or in person when you visit our office. Malayalam, Hindi, and English are all comfortable languages for our team.",
+        "Our consultancy is based in Kochi and we work with clients across Kerala: employed professionals, students, families split between countries, and parents supporting children abroad. Consultations can start by phone, email, or in person when you visit our office. Malayalam, Hindi, and English are all comfortable languages for our team.",
         "Distance is not a barrier. What matters is clear communication and organised documents.",
       ],
     },

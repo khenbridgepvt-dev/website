@@ -5,29 +5,24 @@ import sharp from "sharp";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
-const logoPath = path.join(rootDir, "public", "logo", "Logo.png");
-const titlePath = path.join(rootDir, "public", "logo", "Title.png");
+const logoPath = path.join(rootDir, "public", "logo", "khenbridge-logo.png");
 const outDir = path.join(rootDir, "public", "og");
 const outPath = path.join(outDir, "og-image.png");
 
 const WIDTH = 1200;
 const HEIGHT = 630;
 const BG = { r: 33, g: 23, b: 63, alpha: 1 };
+const LOCKUP_MAX_HEIGHT = 200;
 
 async function main() {
   await fs.mkdir(outDir, { recursive: true });
 
-  const logo = await sharp(logoPath).resize({ height: 160 }).png().toBuffer();
-  const title = await sharp(titlePath).resize({ height: 72 }).png().toBuffer();
-  const logoMeta = await sharp(logo).metadata();
-  const titleMeta = await sharp(title).metadata();
-
-  const gap = 24;
-  const blockWidth = (logoMeta.width ?? 0) + gap + (titleMeta.width ?? 0);
-  const logoLeft = Math.round((WIDTH - blockWidth) / 2);
-  const titleLeft = logoLeft + (logoMeta.width ?? 0) + gap;
-  const logoTop = Math.round((HEIGHT - (logoMeta.height ?? 0)) / 2);
-  const titleTop = Math.round((HEIGHT - (titleMeta.height ?? 0)) / 2);
+  const lockup = await sharp(logoPath).resize({ height: LOCKUP_MAX_HEIGHT }).png().toBuffer();
+  const lockupMeta = await sharp(lockup).metadata();
+  const lockupWidth = lockupMeta.width ?? 0;
+  const lockupHeight = lockupMeta.height ?? 0;
+  const left = Math.round((WIDTH - lockupWidth) / 2);
+  const top = Math.round((HEIGHT - lockupHeight) / 2);
 
   await sharp({
     create: {
@@ -37,10 +32,7 @@ async function main() {
       background: BG,
     },
   })
-    .composite([
-      { input: logo, left: logoLeft, top: logoTop },
-      { input: title, left: titleLeft, top: titleTop },
-    ])
+    .composite([{ input: lockup, left, top }])
     .png()
     .toFile(outPath);
 

@@ -8,12 +8,11 @@ const rootDir = path.resolve(__dirname, "..");
 const assetsDir = path.join(rootDir, "assets", "logo");
 const outputDir = path.join(rootDir, "public", "logo");
 
-const BLACK_THRESHOLD = 30;
+const SOURCE = "khenbridge-logo.png";
+const OUTPUT = "khenbridge-logo.png";
+const EXPORT_HEIGHT = 72;
 
-const targets = [
-  { input: "Logo.png", output: "Logo.png", height: 72 },
-  { input: "Title.png", output: "Title.png", height: 56 },
-];
+const BLACK_THRESHOLD = 30;
 
 async function makeBackgroundTransparent(buffer) {
   const image = sharp(buffer).ensureAlpha();
@@ -38,15 +37,15 @@ async function makeBackgroundTransparent(buffer) {
   }).png();
 }
 
-async function optimizeLogo({ input, output, height }) {
-  const inputPath = path.join(assetsDir, input);
-  const outputPath = path.join(outputDir, output);
+async function optimizeLogo() {
+  const inputPath = path.join(assetsDir, SOURCE);
+  const outputPath = path.join(outputDir, OUTPUT);
 
   const trimmed = await sharp(inputPath).trim({ threshold: 15 }).png().toBuffer();
   const transparent = await makeBackgroundTransparent(trimmed);
 
   await transparent
-    .resize({ height, withoutEnlargement: false })
+    .resize({ height: EXPORT_HEIGHT, withoutEnlargement: false })
     .png({ compressionLevel: 9, adaptiveFiltering: true })
     .toFile(outputPath);
 
@@ -54,14 +53,10 @@ async function optimizeLogo({ input, output, height }) {
   const meta = await sharp(outputPath).metadata();
 
   console.log(
-    `${output}: ${meta.width}x${meta.height}px, ${(stats.size / 1024).toFixed(1)} KB`,
+    `${OUTPUT}: ${meta.width}x${meta.height}px, ${(stats.size / 1024).toFixed(1)} KB`,
   );
 }
 
 await fs.mkdir(outputDir, { recursive: true });
-
-for (const target of targets) {
-  await optimizeLogo(target);
-}
-
+await optimizeLogo();
 console.log("Logo optimization complete.");

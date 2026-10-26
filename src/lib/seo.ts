@@ -1,3 +1,4 @@
+import { LOGO_SRC } from "@/lib/brand";
 import {
   OFFICE_ADDRESS_COUNTRY,
   OFFICE_ADDRESS_LOCALITY,
@@ -14,7 +15,7 @@ export const SITE_NAME = "Khenbridge";
 
 export const OG_IMAGE_PATH = "/og/og-image.png";
 export const OG_IMAGE_ALT =
-  "Khenbridge — leading visa consultants in Kerala, immigration experts in Kochi";
+  "Khenbridge: leading visa consultants in Kerala, immigration experts in Kochi";
 
 export const HOME_TITLE =
   "Khenbridge | Leading Visa Consultants in Kerala | Immigration Experts in Kochi";
@@ -33,7 +34,7 @@ export const VISIT_VISAS_TITLE =
   "Visit & Tourist Visa Consultants Kochi | Khenbridge Kerala";
 
 export const VISIT_VISAS_DESCRIPTION =
-  "Planning a trip abroad? Khenbridge in Kochi helps Kerala families with tourist, visit, and religious travel visas — assessment, documents, and clear next steps. Book a free consultation.";
+  "Planning a trip abroad? Khenbridge in Kochi helps Kerala families with tourist, visit, and religious travel visas: assessment, documents, and clear next steps. Book a free consultation.";
 
 export const VISIT_VISAS_KEYWORDS =
   "visit visa consultants Kochi, tourist visa Kerala, religious visit visa, family visit visa India, Schengen tourist visa Kerala, UAE visit visa Kochi, visa assessment Kerala, Khenbridge";
@@ -44,7 +45,7 @@ export const UK_IMMIGRATION_TITLE =
   "UK Visa & Immigration Consultants Kochi | Student, Work, Spouse | Khenbridge";
 
 export const UK_IMMIGRATION_DESCRIPTION =
-  "From student and Skilled Worker visas to spouse applications, extensions, and ILR pathways — Khenbridge in Kochi stays current on UK Home Office rules. Free consultation.";
+  "From student and Skilled Worker visas to spouse applications, extensions, and ILR pathways, Khenbridge in Kochi stays current on UK Home Office rules. Free consultation.";
 
 export const UK_IMMIGRATION_KEYWORDS =
   "UK immigration consultants Kerala, UK visa consultants Kochi, UK spouse visa Kerala, Skilled Worker visa India, UK student visa Kochi, UK visa refusal Kerala, ILR guidance India, Khenbridge";
@@ -106,7 +107,7 @@ function sharedOrganizationFields() {
     email: OFFICE_EMAIL,
     telephone: OFFICE_PHONE,
     image: absoluteUrl(OG_IMAGE_PATH),
-    logo: absoluteUrl("/logo/Logo.png"),
+    logo: absoluteUrl(LOGO_SRC),
     description: HOME_DESCRIPTION,
     address: {
       "@type": "PostalAddress",

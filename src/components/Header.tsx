@@ -5,6 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import {
+  LOGO_ALT,
+  LOGO_INTRINSIC_HEIGHT,
+  LOGO_INTRINSIC_WIDTH,
+  LOGO_SRC,
+} from "@/lib/brand";
 import { PRIMARY_CTA_BUTTON_CLASS } from "@/lib/contact";
 
 const navLinks = [
@@ -107,19 +113,11 @@ export default function Header() {
             className="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 min-h-[44px] rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
           >
             <Image
-              src="/logo/Logo.png"
-              alt="Khenbridge logo"
-              width={36}
-              height={36}
-              className="h-8 w-8 sm:h-9 sm:w-9 object-contain"
-              priority={!isInnerPage}
-            />
-            <Image
-              src="/logo/Title.png"
-              alt="Khenbridge"
-              width={162}
-              height={36}
-              className="h-8 sm:h-9 w-[120px] sm:w-[162px] object-contain object-left translate-y-px"
+              src={LOGO_SRC}
+              alt={LOGO_ALT}
+              width={LOGO_INTRINSIC_WIDTH}
+              height={LOGO_INTRINSIC_HEIGHT}
+              className="h-8 sm:h-9 w-auto max-w-[min(100%,10.5rem)] sm:max-w-[11.5rem] object-contain object-left"
               priority={!isInnerPage}
             />
           </Link>

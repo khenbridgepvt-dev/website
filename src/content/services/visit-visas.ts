@@ -2,7 +2,7 @@ import type { ServiceArticleContent } from "@/content/services/types";
 
 export const visitVisasContent: ServiceArticleContent = {
   eyebrow: "Khenbridge",
-  h1: "Visit, tourist, and short-stay visas from Kochi — guidance for travel worldwide",
+  h1: "Visit, tourist, and short-stay visas from Kochi: guidance for travel worldwide",
   intro: [
     "Planning a short trip outside India should feel exciting, not confusing. Whether you are booking a holiday, visiting family who live abroad, travelling for pilgrimage, or making a brief business trip, the visa part often comes with more questions than the flight itself. At Khenbridge, we help people across Kerala understand what is realistic for their situation, which visa type fits, and how to prepare an application that reflects their story clearly.",
     "We are not here to sell you a visa. Embassies and consulates make the final decision. What we do offer is careful assessment, honest advice, and hands-on support with forms, documents, and timelines so you are not guessing at each step.",
@@ -15,10 +15,10 @@ export const visitVisasContent: ServiceArticleContent = {
         "This page is for anyone in Kerala who needs a short-stay permission to enter another country, usually for a limited number of days or months. That includes:",
       ],
       bullets: [
-        "Tourist travel — sightseeing, holidays, cruises, or multi-country tours where each stop may need its own visitor permission.",
-        "Family visits — staying with relatives or close friends who live abroad, including parents visiting children or siblings reuniting for a few weeks.",
-        "Religious and pilgrimage travel — journeys tied to faith, festivals, or sacred sites, where the purpose of travel must be explained properly on the application.",
-        "Short business visits — meetings, conferences, or site visits where you are not taking up local employment (rules differ by country; we help you check that your trip fits a visitor route).",
+        "Tourist travel: sightseeing, holidays, cruises, or multi-country tours where each stop may need its own visitor permission.",
+        "Family visits: staying with relatives or close friends who live abroad, including parents visiting children or siblings reuniting for a few weeks.",
+        "Religious and pilgrimage travel: journeys tied to faith, festivals, or sacred sites, where the purpose of travel must be explained properly on the application.",
+        "Short business visits: meetings, conferences, or site visits where you are not taking up local employment (rules differ by country; we help you check that your trip fits a visitor route).",
       ],
       paragraphsAfter: [
         "If you are looking for a long-term work permit, student visa with a full course plan, or settlement in another country, those are different routes. We can still point you in the right direction, but this page focuses on visit and tourist-style travel.",
@@ -35,12 +35,12 @@ export const visitVisasContent: ServiceArticleContent = {
         "Every embassy has its own checklist. Processing times vary by season, location, and individual case. We do not quote fixed turnaround dates because they change; instead we tell you what to expect based on current practice and build your preparation schedule backwards from your intended travel dates.",
       ],
       bullets: [
-        "United Kingdom — Standard Visitor route for tourism, family visits, and some business activities.",
-        "Schengen and wider Europe — Short-stay visas for many EU/EEA countries (one application can sometimes cover several stops; we help you plan that sensibly).",
-        "United States — Visitor visas for tourism and family visits (category depends on your circumstances).",
-        "Canada — Visitor visa or electronic travel authorisation, depending on passport and purpose.",
-        "Australia — Visitor streams for holidays and family stays.",
-        "UAE and other GCC countries — Visit visas for tourism, family, or short business trips, as permitted by local rules.",
+        "United Kingdom: Standard Visitor route for tourism, family visits, and some business activities.",
+        "Schengen and wider Europe: short-stay visas for many EU/EEA countries (one application can sometimes cover several stops; we help you plan that sensibly).",
+        "United States: visitor visas for tourism and family visits (category depends on your circumstances).",
+        "Canada: visitor visa or electronic travel authorisation, depending on passport and purpose.",
+        "Australia: visitor streams for holidays and family stays.",
+        "UAE and other GCC countries: visit visas for tourism, family, or short business trips, as permitted by local rules.",
       ],
     },
     {
@@ -82,20 +82,20 @@ export const visitVisasContent: ServiceArticleContent = {
     },
     {
       id: "application-prep",
-      title: "Application preparation — how we help",
+      title: "Application preparation: how we help",
       paragraphs: [
-        "Embassies make the final decision — we cannot promise an outcome. What we can do is work with you on preparation so you know what is needed, what to prioritise, and how to move forward without guessing.",
+        "Embassies make the final decision. We cannot promise an outcome. What we can do is work with you on preparation so you know what is needed, what to prioritise, and how to move forward without guessing.",
         "Many clients come to us with only a travel idea and a passport. We help you build the application from scratch: which forms apply, which documents to collect, how to organise them, and when each step should happen before your travel dates.",
       ],
       bullets: [
-        "A clear checklist tailored to your country, purpose, and family situation — not a generic template.",
+        "A clear checklist tailored to your country, purpose, and family situation, not a generic template.",
         "Guidance in plain language (Malayalam, Hindi, and English) so you understand what each requirement means.",
         "Hands-on help with forms, cover letters, itineraries, and sponsor paperwork where you want support.",
         "Honest advice on what to focus on first when time or budget is tight, including sensible ways to avoid unnecessary costs.",
         "Review before you submit, and help if the embassy asks for more information later.",
       ],
       paragraphsAfter: [
-        "You stay in charge of your case. We guide, explain, and do the heavy lifting where you need it — you sign and submit where the embassy requires it.",
+        "You stay in charge of your case. We guide, explain, and do the heavy lifting where you need it. You sign and submit where the embassy requires it.",
       ],
     },
     {
@@ -134,7 +134,7 @@ export const visitVisasContent: ServiceArticleContent = {
       paragraphs: [
         "Khenbridge is rooted in Kochi and serves clients throughout Kerala, from Thiruvananthapuram to Kannur and everywhere in between. Many of our clients prefer to discuss sensitive financial and family matters in Malayalam or Hindi as well as English. We explain embassy jargon in plain language so you know what you are signing.",
         "Visitor visas look simple online until you hit a refusal or a request for more documents. We have seen how small errors derail well-intentioned trips. Our value is in careful preparation, realistic expectations, and staying with you through the process rather than handing you a generic template and wishing you luck.",
-        "We also work with families applying together — parents, spouses, children — so each person’s application supports the others where embassies expect linked cases.",
+        "We also work with families applying together (parents, spouses, children) so each person’s application supports the others where embassies expect linked cases.",
       ],
     },
   ],
@@ -152,7 +152,7 @@ export const visitVisasContent: ServiceArticleContent = {
     {
       question: "I was refused a visa before. Can I apply again?",
       answer:
-        "Often yes, but you need a clear strategy. Refusals usually stay on record. We review the refusal reason, fix weak areas, and only recommend reapplying when your case is genuinely stronger—not on hope alone.",
+        "Often yes, but you need a clear strategy. Refusals usually stay on record. We review the refusal reason, fix weak areas, and only recommend reapplying when your case is genuinely stronger, not on hope alone.",
     },
     {
       question: "Do you guarantee approval?",
