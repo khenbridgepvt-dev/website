@@ -15,13 +15,6 @@ const AboutSection = dynamic(() => import("@/components/AboutSection"), {
   loading: () => <SectionPlaceholder className="min-h-[400px]" />,
 });
 
-const DestinationsSection = dynamic(
-  () => import("@/components/TrustedByMarquee"),
-  {
-    loading: () => <SectionPlaceholder className="min-h-[320px] bg-background" />,
-  },
-);
-
 const WhyChooseUs = dynamic(() => import("@/components/LovedByPeople"), {
   loading: () => <SectionPlaceholder className="min-h-[360px] bg-background" />,
 });
@@ -43,7 +36,6 @@ export default function Home() {
         <ServicesGrid />
         <ConceptSection />
         <AboutSection />
-        <DestinationsSection />
         <WhyChooseUs />
         <ServiceHighlights />
       </main>

@@ -192,7 +192,7 @@ Keep page length scrollable but **scannable** (short paragraphs, some lists, FAQ
 | Who this is for | Leisure, family visits, pilgrimage/religious travel, short business visits |
 | Countries and visa types we help with | UK visitor, Schengen, USA/Canada/Australia visitor, UAE/GCC, etc. |
 | How our assessment works | Free initial review → realistic advice → checklist → application support |
-| What stronger applications have in common | Best practices (honest forms, finances, travel history)—not guarantees |
+| Application preparation | How we help (checklists, guidance, prep from scratch, priorities, cost sense)—not outcome guarantees |
 | Tourist, visit, and religious travel explained | Plain definitions |
 | Why work with a Kochi-based team | Local office, languages, Kerala-wide clients |
 | FAQ | 6 questions |
@@ -233,7 +233,7 @@ Write 1,000–1,300 words in clear British/Indian English. Sound like an experie
 
 Structure with one H1 and H2/H3 headings as specified:
 [H1] Visit, tourist, and short-stay visas from Kochi — guidance for travel worldwide
-Then H2s: Who this is for | Countries and visa types we help with | How our assessment works | What makes applications stronger (best practices, not guarantees) | Tourist, visit, and religious travel explained simply | Why work with a Kochi-based team | FAQ (6 questions with concise answers) | Next step
+Then H2s: Who this is for | Countries and visa types we help with | How our assessment works | Application preparation — how we help | Tourist, visit, and religious travel explained simply | Why work with a Kochi-based team | FAQ (6 questions with concise answers) | Next step
 
 Must include:
 - Mention tourist, visit, family visit, and religious/pilgrimage travel as separate use cases in plain language.

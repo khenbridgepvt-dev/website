@@ -13,7 +13,6 @@ const navLinks = [
   { name: "Services", href: "/#services" },
   { name: "Visit visas", href: "/services/visit-visas/" },
   { name: "UK Immigration", href: "/services/uk-immigration/" },
-  { name: "Destinations", href: "/#destinations" },
 ];
 
 const INTAKE_PATH = "/queries/intake";

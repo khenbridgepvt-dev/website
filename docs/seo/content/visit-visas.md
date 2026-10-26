@@ -42,25 +42,19 @@ We start with a conversation, not a form dump. Our initial consultation is free.
 
 You stay in control of your application. We guide; you sign and submit where required.
 
-## What makes applications stronger (best practices, not guarantees)
+## Application preparation — how we help
 
-No consultant can promise an approval. What we can share is what strong visitor applications usually have in common:
+Embassies make the final decision — we cannot promise an outcome. What we can do is work with you on preparation so you know what is needed, what to prioritise, and how to move forward without guessing.
 
-**A coherent story.** Your form, cover letter, itinerary, and supporting documents should all tell the same story about why you are travelling and when you will return.
+Many clients come to us with only a travel idea and a passport. We help you build the application from scratch: which forms apply, which documents to collect, how to organise them, and when each step should happen before your travel dates.
 
-**Honest answers.** Small inconsistencies between a form and an interview, or between sponsors’ letters and your employment details, cause more problems than a complicated travel history.
+- A clear checklist tailored to your country, purpose, and family situation — not a generic template.
+- Guidance in plain language (Malayalam, Hindi, and English) so you understand what each requirement means.
+- Hands-on help with forms, cover letters, itineraries, and sponsor paperwork where you want support.
+- Honest advice on what to focus on first when time or budget is tight, including sensible ways to avoid unnecessary costs.
+- Review before you submit, and help if the embassy asks for more information later.
 
-**Proof of ties to India.** Employment, business ownership, family responsibilities, property, or ongoing studies help show that you have reasons to come back after your trip.
-
-**Realistic finances.** You need to show you can fund the trip (or that a sponsor can) without overstretching. Sudden large deposits without explanation often raise questions.
-
-**Travel history when you have it.** Previous visas used properly can support a new application. If you have refusals, we address them directly rather than hiding them.
-
-**Purpose matched to visa type.** A pilgrimage is not the same as a beach holiday on paper. Religious travel should be described with the right detail and supporting invitations or group arrangements where relevant.
-
-**Preparation time.** Leaving everything to the last week before departure is risky. We recommend starting as soon as your dates are firm.
-
-These habits improve clarity. They do not override an embassy’s rules or officer judgment.
+You stay in charge of your case. We guide, explain, and do the heavy lifting where you need it — you sign and submit where the embassy requires it.
 
 ## Tourist, visit, and religious travel explained simply
 

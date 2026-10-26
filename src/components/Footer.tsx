@@ -16,7 +16,7 @@ export default function Footer() {
       className="relative z-10 bg-indigo pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-10 min-h-[100dvh]"
     >
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-8 xl:gap-12 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-8 xl:gap-12 mb-12 sm:mb-16">
           {/* Logo and Contact */}
           <div className="min-w-0">
             <Link
@@ -143,43 +143,7 @@ export default function Footer() {
                   Work Permits
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/#destinations"
-                  className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
-                >
-                  Tourist Visas
-                </Link>
-              </li>
             </ul>
-          </div>
-
-          {/* Destinations */}
-          <div>
-            <h3 className="text-white text-lg font-semibold mb-4 sm:mb-6">
-              Destinations
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "UK Visa",
-                "Canada Visa",
-                "Australia Visa",
-                "USA Visa",
-                "Schengen Visa",
-                "Dubai Visa",
-                "Student Visa",
-                "Work Permit",
-                "Family Visa",
-              ].map((tag) => (
-                <Link
-                  key={tag}
-                  href="/#destinations"
-                  className="bg-white/5 text-white/75 text-xs sm:text-sm px-3 py-1.5 sm:py-2 rounded-sm hover:bg-primary hover:text-white cursor-pointer transition-all duration-300 border border-white/10"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
           </div>
         </div>
 

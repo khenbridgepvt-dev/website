@@ -39,19 +39,21 @@ export default function ServiceArticle({ content }: { content: ServiceArticleCon
   return (
     <article className="bg-background pt-28 sm:pt-32 pb-16 sm:pb-20 lg:pb-24">
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="text-primary font-semibold text-sm uppercase tracking-wide mb-3">
-            {eyebrow}
-          </p>
-          <h1 className="text-3xl sm:text-4xl font-bold text-indigo leading-tight mb-6">{h1}</h1>
-          {intro.map((paragraph) => (
-            <p
-              key={paragraph.slice(0, 48)}
-              className="text-indigo/70 text-base sm:text-lg leading-relaxed mb-4"
-            >
-              {paragraph}
+        <div className="max-w-3xl mx-auto lg:max-w-4xl">
+          <div className="text-center lg:text-left">
+            <p className="text-primary font-semibold text-sm uppercase tracking-wide mb-3">
+              {eyebrow}
             </p>
-          ))}
+            <h1 className="text-3xl sm:text-4xl font-bold text-indigo leading-tight mb-6">{h1}</h1>
+            {intro.map((paragraph) => (
+              <p
+                key={paragraph.slice(0, 48)}
+                className="text-indigo/70 text-base sm:text-lg leading-relaxed mb-4"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
 
           {sections.map((section) => (
             <section key={section.id} id={section.id} className="mt-10 scroll-mt-28">
@@ -126,15 +128,17 @@ export default function ServiceArticle({ content }: { content: ServiceArticleCon
             </div>
           </section>
 
-          <section className="mt-12">
+          <section className="mt-12 text-center lg:text-left">
             <h2 className="text-2xl font-semibold text-indigo mb-4">{cta.title}</h2>
             <p className="text-indigo/70 text-base leading-relaxed mb-6">{cta.body}</p>
-            <Link
-              href={cta.href}
-              className={`inline-flex items-center justify-center text-sm sm:text-base px-6 py-3 ${PRIMARY_CTA_BUTTON_CLASS}`}
-            >
-              {cta.buttonLabel}
-            </Link>
+            <div className="flex justify-center lg:justify-start">
+              <Link
+                href={cta.href}
+                className={`inline-flex items-center justify-center text-sm sm:text-base px-6 py-3 ${PRIMARY_CTA_BUTTON_CLASS}`}
+              >
+                {cta.buttonLabel}
+              </Link>
+            </div>
             <p className="text-indigo/70 text-sm sm:text-base mt-6">{contactLine}</p>
           </section>
 
