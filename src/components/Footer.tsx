@@ -113,7 +113,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#uk-immigration"
+                  href="/services/uk-immigration/"
                   className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
                 >
                   UK Immigration

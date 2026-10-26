@@ -1,6 +1,6 @@
 # Service pages plan — Visit visas & UK immigration
 
-**Status:** Visit visas page implemented (`/services/visit-visas/`). UK immigration page pending.  
+**Status:** Visit visas (`/services/visit-visas/`) and UK immigration (`/services/uk-immigration/`) implemented.  
 **Site:** https://www.khenbridge.com  
 **Goal:** Add two high-value, indexable service URLs with full SEO coverage and on-brand UI that matches the existing site (simple, calm, conversion-focused).
 

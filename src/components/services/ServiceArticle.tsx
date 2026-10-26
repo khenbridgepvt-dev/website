@@ -1,9 +1,11 @@
 import Link from "next/link";
 import type { ServiceArticleContent } from "@/content/services/types";
+import { ServiceRichText } from "@/components/services/ServiceRichText";
 import { PRIMARY_CTA_BUTTON_CLASS } from "@/lib/contact";
 
 export default function ServiceArticle({ content }: { content: ServiceArticleContent }) {
-  const { eyebrow, h1, intro, sections, faqs, cta, contactLine, disclaimer } = content;
+  const { eyebrow, h1, intro, sections, faqs, cta, contactLine, lastUpdated, disclaimer } =
+    content;
 
   return (
     <article className="bg-background pt-28 sm:pt-32 pb-16 sm:pb-20 lg:pb-24">
@@ -29,6 +31,22 @@ export default function ServiceArticle({ content }: { content: ServiceArticleCon
                 >
                   {paragraph}
                 </p>
+              ))}
+              {section.linkedParagraphs?.map((segments, index) => (
+                <p
+                  key={index}
+                  className="text-indigo/70 text-base leading-relaxed mb-4"
+                >
+                  <ServiceRichText segments={segments} />
+                </p>
+              ))}
+              {section.subsections?.map((subsection) => (
+                <div key={subsection.title} className="mb-5">
+                  <h3 className="text-lg font-medium text-indigo mb-2">{subsection.title}</h3>
+                  <p className="text-indigo/70 text-base leading-relaxed">
+                    <ServiceRichText segments={subsection.segments} />
+                  </p>
+                </div>
               ))}
               {section.bullets && section.bullets.length > 0 && (
                 <ul className="list-disc pl-5 space-y-2 text-indigo/70 text-base leading-relaxed mb-4">
@@ -88,7 +106,10 @@ export default function ServiceArticle({ content }: { content: ServiceArticleCon
             <p className="text-indigo/70 text-sm sm:text-base mt-6">{contactLine}</p>
           </section>
 
-          <p className="text-sm text-indigo/60 border-t border-lavender/30 pt-6 mt-10">{disclaimer}</p>
+          {lastUpdated && (
+            <p className="text-sm text-indigo/60 mt-10">{lastUpdated}</p>
+          )}
+          <p className="text-sm text-indigo/60 border-t border-lavender/30 pt-6 mt-6">{disclaimer}</p>
         </div>
       </div>
     </article>

@@ -22,7 +22,12 @@ type ServiceTile = {
 };
 
 const services: ServiceTile[] = [
-  { title: "UK Visa &\nImmigration", img: "/images/london.png", icon: ShieldCheck },
+  {
+    title: "UK Visa &\nImmigration",
+    img: "/images/london.png",
+    icon: ShieldCheck,
+    href: "/services/uk-immigration/",
+  },
   { title: "Visa Refusal\nAppeals", img: "/images/bridge.png", icon: Scale },
   { title: "Student\nVisas", img: "/images/canada.png", icon: GraduationCap },
   {

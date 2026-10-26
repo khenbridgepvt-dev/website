@@ -38,12 +38,24 @@ export const VISIT_VISAS_DESCRIPTION =
 export const VISIT_VISAS_KEYWORDS =
   "visit visa consultants Kochi, tourist visa Kerala, religious visit visa, family visit visa India, Schengen tourist visa Kerala, UAE visit visa Kochi, visa assessment Kerala, Khenbridge";
 
+export const UK_IMMIGRATION_PATH = "/services/uk-immigration/";
+
+export const UK_IMMIGRATION_TITLE =
+  "UK Visa & Immigration Consultants Kochi | Student, Work, Spouse | Khenbridge";
+
+export const UK_IMMIGRATION_DESCRIPTION =
+  "From student and Skilled Worker visas to spouse applications, extensions, and ILR pathways — Khenbridge in Kochi stays current on UK Home Office rules. Free consultation.";
+
+export const UK_IMMIGRATION_KEYWORDS =
+  "UK immigration consultants Kerala, UK visa consultants Kochi, UK spouse visa Kerala, Skilled Worker visa India, UK student visa Kochi, UK visa refusal Kerala, ILR guidance India, Khenbridge";
+
 /** Paths used in metadata and Open Graph (trailing slash where site uses trailingSlash). */
 export type SitePath =
   | "/"
   | "/queries/intake"
   | "/queries/intake/"
-  | "/services/visit-visas/";
+  | "/services/visit-visas/"
+  | "/services/uk-immigration/";
 
 const ogImage = {
   url: OG_IMAGE_PATH,

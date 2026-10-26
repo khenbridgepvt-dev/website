@@ -12,7 +12,7 @@ const navLinks = [
   { name: "About Us", href: "/#about" },
   { name: "Services", href: "/#services" },
   { name: "Visit visas", href: "/services/visit-visas/" },
-  { name: "UK Immigration", href: "/#uk-immigration" },
+  { name: "UK Immigration", href: "/services/uk-immigration/" },
   { name: "Destinations", href: "/#destinations" },
 ];
 
