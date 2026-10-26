@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import {
+  HOME_CANONICAL_URL,
   HOME_DESCRIPTION,
   HOME_KEYWORDS,
   HOME_TITLE,
@@ -19,12 +20,12 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_ORIGIN),
+  metadataBase: new URL(HOME_CANONICAL_URL),
   title: HOME_TITLE,
   description: HOME_DESCRIPTION,
   keywords: HOME_KEYWORDS,
   manifest: "/site.webmanifest",
-  alternates: { canonical: "/" },
+  alternates: { canonical: HOME_CANONICAL_URL },
   openGraph: buildOpenGraph({
     title: HOME_TITLE,
     description: HOME_DESCRIPTION,
@@ -52,13 +53,20 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-indigo font-sans">
+      <head>
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="YBX58X0ctwKqYhjo2Pad7Q"
+          async
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: serializeJsonLd(localBusinessJsonLd),
           }}
         />
+      </head>
+      <body className="min-h-full flex flex-col bg-background text-indigo font-sans">
         {children}
       </body>
     </html>

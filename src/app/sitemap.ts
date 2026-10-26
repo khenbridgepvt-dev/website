@@ -1,15 +1,15 @@
 import type { MetadataRoute } from "next";
-import { SITE_ORIGIN } from "@/lib/seo";
+import { HOME_CANONICAL_URL, SITE_ORIGIN } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: SITE_ORIGIN,
+      url: HOME_CANONICAL_URL,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${SITE_ORIGIN}/queries/intake`,
+      url: `${SITE_ORIGIN}/queries/intake/`,
       changeFrequency: "monthly",
       priority: 0.8,
     },

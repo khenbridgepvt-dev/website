@@ -66,10 +66,11 @@ export function absoluteUrl(path: string): string {
   return new URL(path, SITE_ORIGIN).href;
 }
 
-export function buildLocalBusinessJsonLd() {
+const organizationId = `${SITE_ORIGIN}/#organization`;
+
+function sharedOrganizationFields() {
   return {
-    "@context": "https://schema.org",
-    "@type": ["ProfessionalService", "LocalBusiness"],
+    "@id": organizationId,
     name: SITE_NAME,
     url: SITE_ORIGIN,
     email: OFFICE_EMAIL,
@@ -95,6 +96,20 @@ export function buildLocalBusinessJsonLd() {
     ],
   };
 }
+
+export function buildLocalBusinessJsonLd() {
+  const shared = sharedOrganizationFields();
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      { ...shared, "@type": "LocalBusiness" },
+      { ...shared, "@type": "ProfessionalService" },
+    ],
+  };
+}
+
+/** Home document canonical with trailing slash (audit 2 is_canonical). */
+export const HOME_CANONICAL_URL = `${SITE_ORIGIN}/`;
 
 export function serializeJsonLd(data: object): string {
   return JSON.stringify(data).replace(/</g, "\\u003c");

@@ -24,10 +24,16 @@ async function main() {
     .resize({ width: MAX_WIDTH, withoutEnlargement: true })
     .toBuffer();
 
-  await fs.writeFile(pngPath, await sharp(resized).png({ compressionLevel: 9 }).toBuffer());
   await fs.writeFile(webpPath, await sharp(resized).webp({ quality: 82 }).toBuffer());
-
-  console.log(`Optimized ${pngPath} and wrote ${webpPath}`);
+  try {
+    await fs.writeFile(
+      pngPath,
+      await sharp(resized).png({ compressionLevel: 9 }).toBuffer(),
+    );
+    console.log(`Optimized ${pngPath} and wrote ${webpPath}`);
+  } catch (err) {
+    console.warn(`Wrote ${webpPath}; could not rewrite PNG (${err.code ?? err.message})`);
+  }
 }
 
 main().catch((err) => {
