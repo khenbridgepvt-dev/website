@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ShieldCheck,
   GraduationCap,
@@ -13,11 +14,23 @@ import {
   Scale,
 } from "lucide-react";
 
-const services = [
+type ServiceTile = {
+  title: string;
+  img: string;
+  icon: typeof ShieldCheck;
+  href?: string;
+};
+
+const services: ServiceTile[] = [
   { title: "UK Visa &\nImmigration", img: "/images/london.png", icon: ShieldCheck },
   { title: "Visa Refusal\nAppeals", img: "/images/bridge.png", icon: Scale },
   { title: "Student\nVisas", img: "/images/canada.png", icon: GraduationCap },
-  { title: "Tourist &\nVisit Visas", img: "/images/paris.png", icon: Globe },
+  {
+    title: "Tourist &\nVisit Visas",
+    img: "/images/paris.png",
+    icon: Globe,
+    href: "/services/visit-visas/",
+  },
   { title: "Work Permit\nVisas", img: "/images/dubai.png", icon: Briefcase },
   { title: "Business &\nInvestor Visas", img: "/images/newyork.png", icon: Building2 },
   { title: "Family &\nDependent Visas", img: "/images/sydney.png", icon: Users },
@@ -31,15 +44,25 @@ export default function ServicesGrid() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo leading-tight max-w-3xl">
           Visa and immigration services
         </h2>
+        <p className="mt-3 text-base text-indigo/70 max-w-3xl leading-relaxed">
+          <Link
+            href="/services/visit-visas/"
+            className="font-medium text-primary hover:text-accent transition-colors duration-300"
+          >
+            Visit and tourist visas
+          </Link>
+          {" "}
+          — assessment and document support for short-stay travel from Kerala.
+        </p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4">
         {services.map((service, index) => {
           const Icon = service.icon;
-          return (
-            <div
-              key={index}
-              className="relative group overflow-hidden h-[240px] sm:h-[300px] md:h-[360px] lg:h-[420px] xl:h-[450px] cursor-pointer"
-            >
+          const tileClassName =
+            "relative group overflow-hidden h-[240px] sm:h-[300px] md:h-[360px] lg:h-[420px] xl:h-[450px] cursor-pointer block";
+
+          const inner = (
+            <>
               <div className="absolute inset-0 z-0">
                 <Image
                   src={service.img}
@@ -71,6 +94,20 @@ export default function ServicesGrid() {
                   </h3>
                 </motion.div>
               </div>
+            </>
+          );
+
+          if (service.href) {
+            return (
+              <Link key={index} href={service.href} className={tileClassName}>
+                {inner}
+              </Link>
+            );
+          }
+
+          return (
+            <div key={index} className={tileClassName}>
+              {inner}
             </div>
           );
         })}

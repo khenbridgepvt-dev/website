@@ -27,6 +27,24 @@ export const HOME_KEYWORDS =
 export const INTAKE_KEYWORDS =
   "free visa consultation Kerala, book visa consultation Kochi, Khenbridge consultation, visa enquiry Kerala, immigration advice Malayalam Hindi English, initial consultation visa";
 
+export const VISIT_VISAS_PATH = "/services/visit-visas/";
+
+export const VISIT_VISAS_TITLE =
+  "Visit & Tourist Visa Consultants Kochi | Khenbridge Kerala";
+
+export const VISIT_VISAS_DESCRIPTION =
+  "Planning a trip abroad? Khenbridge in Kochi helps Kerala families with tourist, visit, and religious travel visas — assessment, documents, and clear next steps. Book a free consultation.";
+
+export const VISIT_VISAS_KEYWORDS =
+  "visit visa consultants Kochi, tourist visa Kerala, religious visit visa, family visit visa India, Schengen tourist visa Kerala, UAE visit visa Kochi, visa assessment Kerala, Khenbridge";
+
+/** Paths used in metadata and Open Graph (trailing slash where site uses trailingSlash). */
+export type SitePath =
+  | "/"
+  | "/queries/intake"
+  | "/queries/intake/"
+  | "/services/visit-visas/";
+
 const ogImage = {
   url: OG_IMAGE_PATH,
   width: 1200,
@@ -37,7 +55,7 @@ const ogImage = {
 export function buildOpenGraph(opts: {
   title: string;
   description: string;
-  path: "/" | "/queries/intake";
+  path: SitePath;
 }): NonNullable<Metadata["openGraph"]> {
   return {
     type: "website",
@@ -113,4 +131,41 @@ export const HOME_CANONICAL_URL = `${SITE_ORIGIN}/`;
 
 export function serializeJsonLd(data: object): string {
   return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
+export function buildServicePageJsonLd(opts: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  const pageUrl = absoluteUrl(opts.path);
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: opts.name,
+        description: opts.description,
+        about: { "@id": organizationId },
+      },
+      {
+        "@type": "Service",
+        "@id": `${pageUrl}#service`,
+        name: opts.name,
+        description: opts.description,
+        url: pageUrl,
+        provider: { "@id": organizationId },
+        areaServed: [
+          {
+            "@type": "State",
+            name: "Kerala",
+            containedInPlace: { "@type": "Country", name: "India" },
+          },
+          { "@type": "Country", name: "India" },
+        ],
+      },
+    ],
+  };
 }

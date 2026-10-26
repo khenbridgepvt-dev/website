@@ -11,6 +11,7 @@ const navLinks = [
   { name: "Home", href: "/#home" },
   { name: "About Us", href: "/#about" },
   { name: "Services", href: "/#services" },
+  { name: "Visit visas", href: "/services/visit-visas/" },
   { name: "UK Immigration", href: "/#uk-immigration" },
   { name: "Destinations", href: "/#destinations" },
 ];
@@ -19,7 +20,8 @@ const INTAKE_PATH = "/queries/intake";
 
 export default function Header() {
   const pathname = usePathname();
-  const isIntakePage = pathname?.startsWith("/queries/intake");
+  const isInnerPage =
+    pathname?.startsWith("/queries/intake") || pathname?.startsWith("/services/");
   const headerRef = useRef<HTMLElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -92,7 +94,7 @@ export default function Header() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           navOpacity < 0.1 ? "pointer-events-none" : ""
         } ${
-          isScrolled || isIntakePage
+          isScrolled || isInnerPage
             ? "bg-indigo/95 backdrop-blur-md shadow-lg shadow-indigo/20 py-2 sm:py-3"
             : "bg-transparent py-3 sm:py-5"
         }`}
@@ -111,7 +113,7 @@ export default function Header() {
               width={36}
               height={36}
               className="h-8 w-8 sm:h-9 sm:w-9 object-contain"
-              priority={!isIntakePage}
+              priority={!isInnerPage}
             />
             <Image
               src="/logo/Title.png"
@@ -119,7 +121,7 @@ export default function Header() {
               width={162}
               height={36}
               className="h-8 sm:h-9 w-[120px] sm:w-[162px] object-contain object-left translate-y-px"
-              priority={!isIntakePage}
+              priority={!isInnerPage}
             />
           </Link>
 

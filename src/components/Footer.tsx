@@ -105,6 +105,14 @@ export default function Footer() {
             <ul className="flex flex-col gap-2.5 sm:gap-3">
               <li>
                 <Link
+                  href="/services/visit-visas/"
+                  className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
+                >
+                  Visit &amp; tourist visas
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/#uk-immigration"
                   className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
                 >
