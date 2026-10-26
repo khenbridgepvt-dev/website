@@ -60,14 +60,14 @@ export default function IntakeForm({ source = "queries-intake" }: IntakeFormProp
         className="rounded-sm border border-lavender/30 bg-white p-6 sm:p-8 text-center shadow-sm shadow-indigo/5"
         role="status"
       >
-        <p className="text-lg font-semibold text-indigo mb-2">Thank you!</p>
+        <p className="text-lg font-bold text-indigo mb-2">Thank you!</p>
         <p className="text-indigo/70 text-sm sm:text-base">
           We&apos;ve received your details. A specialist will call you back shortly.
         </p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-6 text-sm font-medium text-primary hover:text-violet transition-colors"
+          className="mt-6 text-sm font-normal text-primary hover:text-violet transition-colors"
         >
           Submit another enquiry
         </button>
@@ -87,7 +87,7 @@ export default function IntakeForm({ source = "queries-intake" }: IntakeFormProp
       </div>
 
       <div>
-        <label htmlFor="firstName" className="block text-sm font-medium text-indigo mb-1.5">
+        <label htmlFor="firstName" className="block text-sm font-normal text-indigo mb-1.5">
           First name <span className="text-primary">*</span>
         </label>
         <input
@@ -102,7 +102,7 @@ export default function IntakeForm({ source = "queries-intake" }: IntakeFormProp
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-indigo mb-1.5">
+        <label htmlFor="email" className="block text-sm font-normal text-indigo mb-1.5">
           Email address <span className="text-primary">*</span>
         </label>
         <input
@@ -117,7 +117,7 @@ export default function IntakeForm({ source = "queries-intake" }: IntakeFormProp
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-indigo mb-1.5">
+        <label htmlFor="phone" className="block text-sm font-normal text-indigo mb-1.5">
           Phone number
         </label>
         <input
@@ -131,7 +131,7 @@ export default function IntakeForm({ source = "queries-intake" }: IntakeFormProp
       </div>
 
       <div>
-        <label htmlFor="enquiry" className="block text-sm font-medium text-indigo mb-1.5">
+        <label htmlFor="enquiry" className="block text-sm font-normal text-indigo mb-1.5">
           Enquiry
         </label>
         <textarea

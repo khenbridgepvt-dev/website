@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import { PRIMARY_CTA_BUTTON_CLASS } from "@/lib/contact";
 
 const processSteps = [
   { num: "01", title: "Free Consultation", desc: "We assess your case, understand your goals, and outline a clear path forward." },
@@ -105,7 +106,7 @@ export default function ConceptSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-semibold text-indigo mb-4 sm:mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-indigo mb-4 sm:mb-6 leading-tight"
             >
               Expert guidance to turn your visa dreams into reality.
             </motion.h2>
@@ -141,7 +142,7 @@ export default function ConceptSection() {
                     className="w-full py-3 sm:py-4 flex items-center justify-between text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
                   >
                     <span
-                      className={`text-lg sm:text-xl font-medium transition-colors duration-300 ${
+                      className={`text-lg sm:text-xl font-bold transition-colors duration-300 ${
                         openAccordion === index ? "text-primary" : "text-indigo"
                       }`}
                     >
@@ -170,7 +171,7 @@ export default function ConceptSection() {
                                   {step.num}
                                 </span>
                                 <div className="pt-0.5 sm:pt-1">
-                                  <h3 className="text-indigo font-semibold text-sm sm:text-base leading-tight">
+                                  <h3 className="text-indigo font-bold text-sm sm:text-base leading-tight">
                                     {step.title}
                                   </h3>
                                   <p className="text-indigo/70 text-xs sm:text-sm leading-relaxed mt-0.5">
@@ -200,7 +201,7 @@ export default function ConceptSection() {
             >
               <a
                 href="#services"
-                className="inline-flex items-center gap-2 bg-primary hover:bg-violet text-white font-medium text-base sm:text-lg px-6 sm:px-8 py-3 rounded-sm transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30 group"
+                className={`inline-flex items-center gap-2 text-base sm:text-lg px-6 sm:px-8 py-3 group ${PRIMARY_CTA_BUTTON_CLASS}`}
               >
                 Explore Our Services
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />

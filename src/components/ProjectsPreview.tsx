@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { MAILTO_ENQUIRY_URL } from "@/lib/contact";
+import { MAILTO_ENQUIRY_URL, SECONDARY_CTA_BUTTON_CLASS } from "@/lib/contact";
 
 const highlights = [
   {
@@ -33,7 +33,7 @@ export default function ServiceHighlights() {
             <div className="w-full lg:w-2/12 order-3 lg:order-1 py-4 sm:py-6 lg:py-12 lg:pr-8 lg:border-r border-lavender/20 flex items-start">
               <a
                 href={MAILTO_ENQUIRY_URL}
-                className="w-full bg-indigo hover:bg-primary text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 flex justify-between items-center transition-all duration-300 transform hover:-translate-y-1 rounded-sm text-sm sm:text-base"
+                className={`w-full py-3 sm:py-4 px-4 sm:px-6 flex justify-between items-center text-sm sm:text-base ${SECONDARY_CTA_BUTTON_CLASS}`}
               >
                 Learn More
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:-rotate-45 transition-transform duration-300 flex-shrink-0" />
@@ -47,7 +47,7 @@ export default function ServiceHighlights() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="text-2xl sm:text-3xl md:text-4xl font-semibold text-indigo mb-3 sm:mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo mb-3 sm:mb-6"
               >
                 {item.title}
               </motion.h2>

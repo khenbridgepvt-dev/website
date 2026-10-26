@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4 sm:mb-6">Company</h3>
+            <h3 className="text-white text-lg font-bold mb-4 sm:mb-6">Company</h3>
             <ul className="flex flex-col gap-2.5 sm:gap-3">
               <li>
                 <Link
@@ -101,7 +101,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4 sm:mb-6">Services</h3>
+            <h3 className="text-white text-lg font-bold mb-4 sm:mb-6">Services</h3>
             <ul className="flex flex-col gap-2.5 sm:gap-3">
               <li>
                 <Link

@@ -131,7 +131,7 @@ export default function Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-white/90 hover:text-accent font-medium text-sm tracking-wide transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap"
+                  className="text-white/90 hover:text-accent font-normal text-sm tracking-wide transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap"
                 >
                   {link.name}
                 </Link>
@@ -162,7 +162,7 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-white/90 hover:text-accent hover:bg-white/5 font-medium text-base py-3 px-4 rounded-sm transition-all duration-300"
+                className="text-white/90 hover:text-accent hover:bg-white/5 font-normal text-base py-3 px-4 rounded-sm transition-all duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}

@@ -59,7 +59,7 @@ export default function AboutSection() {
               ].map((tag, idx) => (
                 <span
                   key={idx}
-                  className="bg-indigo/40 text-white/90 px-4 py-2.5 rounded-sm text-sm font-medium hover:bg-indigo/60 transition-colors duration-300 cursor-default"
+                  className="bg-indigo/40 text-white/90 px-4 py-2.5 rounded-sm text-sm font-normal hover:bg-indigo/60 transition-colors duration-300 cursor-default"
                 >
                   {tag}
                 </span>

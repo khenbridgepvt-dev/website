@@ -13,6 +13,7 @@ import {
   FileCheck,
   Scale,
 } from "lucide-react";
+import { GHOST_LINK_CLASS } from "@/lib/contact";
 
 type ServiceTile = {
   title: string;
@@ -52,7 +53,7 @@ export default function ServicesGrid() {
         <p className="mt-3 text-base text-indigo/70 max-w-3xl leading-relaxed">
           <Link
             href="/services/visit-visas/"
-            className="font-medium text-primary hover:text-accent transition-colors duration-300"
+            className={GHOST_LINK_CLASS}
           >
             Visit and tourist visas
           </Link>
@@ -94,7 +95,7 @@ export default function ServicesGrid() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.06 + 0.1, ease: "easeOut" }}
                 >
-                  <h3 className="font-semibold text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-tight whitespace-pre-line group-hover:text-accent transition-colors duration-300">
+                  <h3 className="font-bold text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-tight whitespace-pre-line group-hover:text-accent transition-colors duration-300">
                     {service.title}
                   </h3>
                 </motion.div>

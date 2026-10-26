@@ -17,3 +17,11 @@ export const OFFICE_ADDRESS_DISPLAY = `${OFFICE_STREET_ADDRESS}, ${OFFICE_ADDRES
 /** Brand primary CTA: accent yellow (#E3A72E) + indigo text — match Header “Book Free Consultation”. */
 export const PRIMARY_CTA_BUTTON_CLASS =
   "bg-accent text-indigo font-bold rounded-sm hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300";
+
+/** Secondary CTA: outline on ivory/light sections */
+export const SECONDARY_CTA_BUTTON_CLASS =
+  "inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-bold rounded-sm bg-transparent hover:bg-primary hover:text-white transition-all duration-300 transform hover:-translate-y-1";
+
+/** Ghost text link CTA */
+export const GHOST_LINK_CLASS =
+  "font-normal text-primary hover:text-accent transition-colors duration-300";

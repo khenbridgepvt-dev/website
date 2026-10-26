@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { PRIMARY_CTA_BUTTON_CLASS } from "@/lib/contact";
 
 const HeroDecorations = dynamic(() => import("@/components/HeroDecorations"), {
   ssr: false,
@@ -47,7 +48,7 @@ export default function HeroSection() {
 
           <a
             href="#services"
-            className="inline-flex items-center gap-2 bg-accent text-indigo font-bold text-xs sm:text-sm px-5 sm:px-6 py-2.5 sm:py-3 rounded-sm transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 group"
+            className={`inline-flex items-center gap-2 text-xs sm:text-sm px-5 sm:px-6 py-2.5 sm:py-3 group ${PRIMARY_CTA_BUTTON_CLASS}`}
           >
             Learn More
             <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />

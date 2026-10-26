@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import {
   HOME_CANONICAL_URL,
   HOME_DESCRIPTION,
   HOME_KEYWORDS,
   HOME_TITLE,
-  SITE_ORIGIN,
   buildLocalBusinessJsonLd,
   buildOpenGraph,
   buildTwitter,
@@ -14,10 +13,26 @@ import {
 } from "@/lib/seo";
 import "./globals.css";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+const archivo = localFont({
+  src: [
+    {
+      path: "../../public/fonts/archivo-semi-condensed/Archivo_SemiCondensed-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/archivo-semi-condensed/Archivo_SemiCondensed-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/archivo-semi-condensed/Archivo_SemiCondensed-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-archivo",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -54,7 +69,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} scroll-smooth antialiased`}
+      className={`${archivo.variable} scroll-smooth antialiased`}
     >
       <head>
         <script

@@ -4,27 +4,44 @@
   --color-primary: #4D1B7A;
   --color-background: #FBF9E5;
   --color-indigo: #21173F;
-  --color-violet: #6F249F;
+  --color-violet: #621D92;
   --color-lavender: #9860C6;
   --color-accent: #E3A72E;
   --color-white: #FFFFFF;
   --color-black: #111111;
 
-  --font-sans: var(--font-poppins), Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-archivo), Arial, Helvetica, sans-serif;
 }
 
 :root {
   --background: #FBF9E5;
   --foreground: #21173F;
+  --tracking-heading: -0.025em;
+  --tracking-body: -0.005em;
+  --tracking-eyebrow: 0.2em;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  letter-spacing: var(--tracking-body);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: var(--tracking-heading);
+}
+
+.tracking-eyebrow {
+  letter-spacing: var(--tracking-eyebrow);
 }
 
 /* Smooth scrolling */
