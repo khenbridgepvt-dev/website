@@ -1,10 +1,13 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { OFFICE_EMAIL, OFFICE_PHONE, OFFICE_PHONE_DISPLAY } from "@/lib/contact";
+import SocialIconLinks from "@/components/SocialIconLinks";
+import { Mail, MapPin, Phone } from "lucide-react";
+import {
+  OFFICE_ADDRESS_DISPLAY,
+  OFFICE_EMAIL,
+  OFFICE_PHONE,
+  OFFICE_PHONE_DISPLAY,
+} from "@/lib/contact";
 
 export default function Footer() {
   return (
@@ -23,8 +26,7 @@ export default function Footer() {
             >
               <Image
                 src="/logo/Logo.png"
-                alt=""
-                aria-hidden
+                alt="Khenbridge logo"
                 width={36}
                 height={36}
                 className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 flex-shrink-0 object-contain"
@@ -32,71 +34,48 @@ export default function Footer() {
               <span className="relative h-7 sm:h-8 md:h-9 flex-1 min-w-0 max-w-[10.125rem]">
                 <Image
                   src="/logo/Title.png"
-                  alt=""
-                  aria-hidden
+                  alt="Khenbridge"
                   fill
                   sizes="(max-width: 640px) 120px, 162px"
                   className="object-contain object-left translate-y-px"
                 />
               </span>
             </Link>
-            <p className="text-white/40 text-sm sm:text-base mb-6 leading-relaxed max-w-xs">
+            <p className="text-white/70 text-sm sm:text-base mb-6 leading-relaxed max-w-xs">
               Your bridge to your dreams. Kerala&apos;s most trusted visa consultancy
               with expert immigration guidance across Kerala.
             </p>
             <div className="flex flex-col gap-3 mb-6">
               <a
                 href={`mailto:${OFFICE_EMAIL}`}
-                className="flex items-center gap-3 text-white/70 hover:text-accent transition-colors duration-300 text-sm sm:text-base"
+                className="flex items-center gap-3 text-white/80 hover:text-accent transition-colors duration-300 text-sm sm:text-base"
               >
                 <Mail className="w-4 h-4 text-accent flex-shrink-0" />
                 {OFFICE_EMAIL}
               </a>
               <a
                 href={`tel:${OFFICE_PHONE}`}
-                className="flex items-center gap-3 text-white/70 hover:text-accent transition-colors duration-300 text-sm sm:text-base"
+                className="flex items-center gap-3 text-white/80 hover:text-accent transition-colors duration-300 text-sm sm:text-base"
               >
                 <Phone className="w-4 h-4 text-accent flex-shrink-0" />
                 {OFFICE_PHONE_DISPLAY}
               </a>
               <div className="flex items-start gap-3 text-white/70 text-sm sm:text-base">
                 <MapPin className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                <span>Kochi, Kerala · Serving clients across Kerala</span>
+                <span>{OFFICE_ADDRESS_DISPLAY} · Serving clients across Kerala</span>
               </div>
             </div>
-            <div className="flex gap-3 sm:gap-4">
-              <a
-                href="#"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-sm bg-white/10 flex items-center justify-center text-white/60 hover:bg-accent hover:text-indigo transition-all duration-300"
-                aria-label="Facebook"
-              >
-                <FaFacebook size={16} />
-              </a>
-              <a
-                href="#"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-sm bg-white/10 flex items-center justify-center text-white/60 hover:bg-accent hover:text-indigo transition-all duration-300"
-                aria-label="Instagram"
-              >
-                <FaInstagram size={16} />
-              </a>
-              <a
-                href="#"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-sm bg-white/10 flex items-center justify-center text-white/60 hover:bg-accent hover:text-indigo transition-all duration-300"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin size={16} />
-              </a>
-            </div>
+            <SocialIconLinks />
           </div>
 
           {/* Company */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-4 sm:mb-6">Company</h4>
+            <h3 className="text-white text-lg font-semibold mb-4 sm:mb-6">Company</h3>
             <ul className="flex flex-col gap-2.5 sm:gap-3">
               <li>
                 <Link
                   href="/#home"
-                  className="text-white/50 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
+                  className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
                 >
                   Home
                 </Link>
@@ -104,7 +83,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#about"
-                  className="text-white/50 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
+                  className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
                 >
                   About Us
                 </Link>
@@ -112,7 +91,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#services"
-                  className="text-white/50 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
+                  className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
                 >
                   Services
                 </Link>
@@ -122,12 +101,12 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-4 sm:mb-6">Services</h4>
+            <h3 className="text-white text-lg font-semibold mb-4 sm:mb-6">Services</h3>
             <ul className="flex flex-col gap-2.5 sm:gap-3">
               <li>
                 <Link
                   href="/#uk-immigration"
-                  className="text-white/50 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
+                  className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
                 >
                   UK Immigration
                 </Link>
@@ -135,7 +114,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#services"
-                  className="text-white/50 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
+                  className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
                 >
                   Visa Refusal Appeals
                 </Link>
@@ -143,7 +122,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#services"
-                  className="text-white/50 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
+                  className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
                 >
                   Student Visas
                 </Link>
@@ -151,7 +130,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#services"
-                  className="text-white/50 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
+                  className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
                 >
                   Work Permits
                 </Link>
@@ -159,7 +138,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#destinations"
-                  className="text-white/50 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
+                  className="text-white/75 hover:text-accent transition-colors duration-300 text-sm sm:text-base inline-block py-1"
                 >
                   Tourist Visas
                 </Link>
@@ -169,9 +148,9 @@ export default function Footer() {
 
           {/* Destinations */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-4 sm:mb-6">
+            <h3 className="text-white text-lg font-semibold mb-4 sm:mb-6">
               Destinations
-            </h4>
+            </h3>
             <div className="flex flex-wrap gap-2">
               {[
                 "UK Visa",
@@ -187,7 +166,7 @@ export default function Footer() {
                 <Link
                   key={tag}
                   href="/#destinations"
-                  className="bg-white/5 text-white/50 text-xs sm:text-sm px-3 py-1.5 sm:py-2 rounded-sm hover:bg-primary hover:text-white cursor-pointer transition-all duration-300 border border-white/10"
+                  className="bg-white/5 text-white/75 text-xs sm:text-sm px-3 py-1.5 sm:py-2 rounded-sm hover:bg-primary hover:text-white cursor-pointer transition-all duration-300 border border-white/10"
                 >
                   {tag}
                 </Link>
@@ -198,10 +177,10 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-white/10 pt-6 sm:pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-          <p className="text-white/30 text-xs sm:text-sm">
+          <p className="text-white/60 text-xs sm:text-sm">
             © 2026 Khenbridge. All Rights Reserved.
           </p>
-          <p className="text-white/30 text-xs sm:text-sm">
+          <p className="text-white/60 text-xs sm:text-sm">
             Your bridge to your dreams.
           </p>
         </div>

@@ -1,29 +1,46 @@
 import type { Metadata, Viewport } from "next";
-import { Poppins, Shadows_Into_Light } from "next/font/google";
+import { Poppins } from "next/font/google";
+import {
+  HOME_DESCRIPTION,
+  HOME_KEYWORDS,
+  HOME_TITLE,
+  SITE_ORIGIN,
+  buildLocalBusinessJsonLd,
+  buildOpenGraph,
+  buildTwitter,
+  serializeJsonLd,
+} from "@/lib/seo";
 import "./globals.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-});
-
-const shadowsIntoLight = Shadows_Into_Light({
-  variable: "--font-shadows-into-light",
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "Khenbridge | Leading Visa Consultants in Kerala | Immigration Experts in Kochi",
-  description: "Khenbridge is Kerala's most trusted visa consultancy. Expert immigration guidance, visa refusal appeals, student visas, and work permits. Office in Kochi, serving clients across Kerala.",
-  keywords: "visa consultants Kerala, UK immigration Kerala, visa consultants Kochi, visa consultants Trivandrum, UK visa refusal appeal, student visa Kerala, work permit visa India, best visa agency Kerala, Khenbridge",
+  metadataBase: new URL(SITE_ORIGIN),
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
+  keywords: HOME_KEYWORDS,
   manifest: "/site.webmanifest",
+  alternates: { canonical: "/" },
+  openGraph: buildOpenGraph({
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    path: "/",
+  }),
+  twitter: buildTwitter({
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+  }),
 };
 
 export const viewport: Viewport = {
   themeColor: "#21173F",
 };
+
+const localBusinessJsonLd = buildLocalBusinessJsonLd();
 
 export default function RootLayout({
   children,
@@ -33,9 +50,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${shadowsIntoLight.variable} scroll-smooth antialiased`}
+      className={`${poppins.variable} scroll-smooth antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-indigo font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: serializeJsonLd(localBusinessJsonLd),
+          }}
+        />
         {children}
       </body>
     </html>

@@ -42,7 +42,7 @@ export default function ServiceHighlights() {
 
             {/* Content */}
             <div className="w-full lg:w-6/12 order-1 lg:order-2 py-6 sm:py-8 lg:py-12 lg:px-8 xl:px-12 lg:border-r border-lavender/20">
-              <motion.h3
+              <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -50,13 +50,13 @@ export default function ServiceHighlights() {
                 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-indigo mb-3 sm:mb-6"
               >
                 {item.title}
-              </motion.h3>
+              </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-indigo/50 leading-relaxed"
+                className="text-base sm:text-lg text-indigo/70 leading-relaxed"
               >
                 {item.description}
               </motion.p>

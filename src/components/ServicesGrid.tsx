@@ -26,7 +26,12 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <section id="services">
+    <section id="services" className="bg-background">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-6 sm:pb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo leading-tight max-w-3xl">
+          Visa and immigration services
+        </h2>
+      </div>
       <div className="grid grid-cols-2 md:grid-cols-4">
         {services.map((service, index) => {
           const Icon = service.icon;

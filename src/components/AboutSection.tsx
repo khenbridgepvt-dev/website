@@ -23,7 +23,7 @@ export default function AboutSection() {
         <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12">
           {/* Left Text Content */}
           <div className="w-full lg:w-1/2">
-            <motion.h3
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -31,14 +31,14 @@ export default function AboutSection() {
               className="text-3xl sm:text-4xl lg:text-[2.75rem] text-white font-bold mb-6 leading-tight max-w-lg"
             >
               Do not let a visa stand between you and your future.
-            </motion.h3>
+            </motion.h2>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base sm:text-lg text-white/60 mb-8 leading-relaxed max-w-md"
+              className="text-base sm:text-lg text-white/80 mb-8 leading-relaxed max-w-md"
             >
               Expert visa and immigration solutions tailored for your unique journey. We provide comprehensive legal support and trusted guidance every step of the way.
             </motion.p>

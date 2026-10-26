@@ -100,7 +100,7 @@ export default function ConceptSection() {
 
           {/* Right Side: Text and Accordion */}
           <div className="w-full lg:w-1/2">
-            <motion.h3
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -108,14 +108,14 @@ export default function ConceptSection() {
               className="text-3xl sm:text-4xl md:text-5xl font-semibold text-indigo mb-4 sm:mb-6 leading-tight"
             >
               Expert guidance to turn your visa dreams into reality.
-            </motion.h3>
+            </motion.h2>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-base sm:text-lg text-indigo/60 mb-6 sm:mb-8 leading-relaxed"
+              className="text-base sm:text-lg text-indigo/70 mb-6 sm:mb-8 leading-relaxed"
             >
               At Khenbridge, we do not just file applications. We build
               airtight cases. As UK Visa Specialists, with deep expertise in
@@ -170,10 +170,10 @@ export default function ConceptSection() {
                                   {step.num}
                                 </span>
                                 <div className="pt-0.5 sm:pt-1">
-                                  <h5 className="text-indigo font-semibold text-sm sm:text-base leading-tight">
+                                  <h3 className="text-indigo font-semibold text-sm sm:text-base leading-tight">
                                     {step.title}
-                                  </h5>
-                                  <p className="text-indigo/50 text-xs sm:text-sm leading-relaxed mt-0.5">
+                                  </h3>
+                                  <p className="text-indigo/70 text-xs sm:text-sm leading-relaxed mt-0.5">
                                     {step.desc}
                                   </p>
                                 </div>
@@ -181,7 +181,7 @@ export default function ConceptSection() {
                             ))}
                           </div>
                         ) : (
-                          <p className="text-indigo/60 pb-4 sm:pb-5 leading-relaxed text-sm sm:text-base">
+                          <p className="text-indigo/70 pb-4 sm:pb-5 leading-relaxed text-sm sm:text-base">
                             {item.content}
                           </p>
                         )}

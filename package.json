@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "optimize-logos": "node scripts/optimize-logos.mjs",
-    "optimize-favicons": "node scripts/optimize-favicons.mjs"
+    "optimize-favicons": "node scripts/optimize-favicons.mjs",
+    "generate-og-image": "node scripts/generate-og-image.mjs",
+    "optimize-hero": "node scripts/optimize-hero.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

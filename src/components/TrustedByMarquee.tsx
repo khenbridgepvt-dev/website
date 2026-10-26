@@ -17,7 +17,7 @@ export default function DestinationsSection() {
     <section id="destinations" className="bg-background py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 sm:mb-16">
-          <motion.h3
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -25,13 +25,13 @@ export default function DestinationsSection() {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-indigo mb-3 sm:mb-4"
           >
             Your destination awaits
-          </motion.h3>
+          </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg text-indigo/50 max-w-xl mx-auto"
+            className="text-base sm:text-lg text-indigo/70 max-w-xl mx-auto"
           >
             We process visas to all major countries. Choose your dream
             destination and let us handle the rest.
@@ -57,9 +57,9 @@ export default function DestinationsSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-indigo/80 via-indigo/30 to-transparent group-hover:from-primary/80 transition-colors duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
-                <h4 className="text-white font-semibold text-lg sm:text-xl md:text-2xl group-hover:text-accent transition-colors duration-300">
+                <h3 className="text-white font-semibold text-lg sm:text-xl md:text-2xl group-hover:text-accent transition-colors duration-300">
                   {dest.name}
-                </h4>
+                </h3>
               </div>
             </motion.div>
           ))}

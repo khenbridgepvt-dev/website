@@ -107,22 +107,19 @@ export default function Header() {
           >
             <Image
               src="/logo/Logo.png"
-              alt=""
-              aria-hidden
+              alt="Khenbridge logo"
               width={36}
               height={36}
               className="h-8 w-8 sm:h-9 sm:w-9 object-contain"
-              priority
+              priority={!isIntakePage}
             />
             <Image
               src="/logo/Title.png"
-              alt=""
-              aria-hidden
+              alt="Khenbridge"
               width={162}
               height={36}
-              className="h-8 sm:h-9 w-auto object-contain translate-y-px"
-              style={{ width: "auto" }}
-              priority
+              className="h-8 sm:h-9 w-[120px] sm:w-[162px] object-contain object-left translate-y-px"
+              priority={!isIntakePage}
             />
           </Link>
 
@@ -133,7 +130,7 @@ export default function Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-white/70 hover:text-accent font-medium text-sm tracking-wide transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap"
+                  className="text-white/90 hover:text-accent font-medium text-sm tracking-wide transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap"
                 >
                   {link.name}
                 </Link>
@@ -164,7 +161,7 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-white/80 hover:text-accent hover:bg-white/5 font-medium text-base py-3 px-4 rounded-sm transition-all duration-300"
+                className="text-white/90 hover:text-accent hover:bg-white/5 font-medium text-base py-3 px-4 rounded-sm transition-all duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}

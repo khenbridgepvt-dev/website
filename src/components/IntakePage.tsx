@@ -1,9 +1,12 @@
-"use client";
-
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Mail } from "lucide-react";
-import IntakeForm from "@/components/IntakeForm";
+import IntakeFormSkeleton from "@/components/IntakeFormSkeleton";
 import { MAILTO_URL, OFFICE_EMAIL, PRIMARY_CTA_BUTTON_CLASS } from "@/lib/contact";
+
+const IntakeForm = dynamic(() => import("@/components/IntakeForm"), {
+  loading: () => <IntakeFormSkeleton />,
+});
 
 const nextSteps = [
   "We review your enquiry",
@@ -52,8 +55,11 @@ export default function IntakePage() {
               </ol>
             </div>
 
-            <p className="mt-8 text-sm text-indigo/50">
-              <Link href="/" className="hover:text-primary transition-colors underline-offset-2 hover:underline">
+            <p className="mt-8 text-sm text-indigo/70">
+              <Link
+                href="/"
+                className="hover:text-primary transition-colors underline-offset-2 hover:underline"
+              >
                 Explore Khenbridge
               </Link>
             </p>

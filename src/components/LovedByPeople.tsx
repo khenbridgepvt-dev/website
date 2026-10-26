@@ -34,7 +34,7 @@ export default function WhyChooseUs() {
   return (
     <section className="bg-background py-16 sm:py-20">
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h3
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
           className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-indigo leading-tight mb-10 max-w-3xl"
         >
           Why families, students, and professionals across Kerala trust Khenbridge.
-        </motion.h3>
+        </motion.h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {features.map((feature, index) => {
@@ -58,10 +58,10 @@ export default function WhyChooseUs() {
               >
                 <div>
                   <Icon className="w-12 h-12 text-accent mb-6" strokeWidth={1.5} />
-                  <h4 className="text-2xl font-bold mb-4 leading-tight">
+                  <h3 className="text-2xl font-bold mb-4 leading-tight">
                     {feature.title}
-                  </h4>
-                  <p className="text-white/60 leading-relaxed text-sm">
+                  </h3>
+                  <p className="text-white/80 leading-relaxed text-sm">
                     {feature.description}
                   </p>
                 </div>
